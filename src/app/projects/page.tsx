@@ -52,7 +52,7 @@ const projects = [
             "Subnetting",
             "Troubleshooting",
         ],
-        href: "/projects/network-design",
+        href: "/projects/db-migration",
     },
 ];
 
