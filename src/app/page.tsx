@@ -25,13 +25,13 @@ export default function HomePage() {
                 <div className="mt-8 flex flex-wrap gap-3">
                     <Link
                         href="/projects"
-                        className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
+                        className="rounded-md bg-teal-600 px-4 py-2 text-sm font-medium text-white hover:bg-teal-700"
                     >
                         View Projects
                     </Link>
                     <Link
                         href="/contact"
-                        className="rounded-md border border-slate-200 px-4 py-2 text-sm font-medium text-slate-800 hover:bg-white dark:border-slate-800 dark:text-slate-100 dark:hover:bg-slate-900"
+                        className="rounded-md bg-teal-600 px-4 py-2 text-sm font-medium text-white hover:bg-teal-700"
                     >
                         Contact
                     </Link>
