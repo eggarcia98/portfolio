@@ -1,6 +1,19 @@
 import { Navbar } from "@/components/navbar";
 import Link from "next/link";
 
+import type { Metadata } from "next";
+import { site } from "@/lib/site";
+
+export const metadata: Metadata = {
+    title: "About",
+    description: `About ${site.name} — software engineering with cloud and networking foundations.`,
+    openGraph: {
+        title: `About | ${site.name}`,
+        description: `About ${site.name} — software engineering with cloud and networking foundations.`,
+        url: `${site.url}/about`,
+    },
+};
+
 export default function AboutPage() {
     return (
         <div className="min-h-dvh bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50">

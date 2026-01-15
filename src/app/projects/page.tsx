@@ -1,6 +1,19 @@
 import { Navbar } from "@/components/navbar";
 import { ProjectCard } from "@/components/project-card";
 
+import type { Metadata } from "next";
+import { site } from "@/lib/site";
+
+export const metadata: Metadata = {
+    title: "Projects",
+    description: `Case studies and projects by ${site.name}, focused on backend, cloud, and networking.`,
+    openGraph: {
+        title: `Projects | ${site.name}`,
+        description: `Case studies and projects by ${site.name}, focused on backend, cloud, and networking.`,
+        url: `${site.url}/projects`,
+    },
+};
+
 const projects = [
     {
         title: "HL7 Data Proxy & Cloud Integration",
