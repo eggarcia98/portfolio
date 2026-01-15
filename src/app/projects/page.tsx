@@ -56,14 +56,15 @@ const projects = [
     {
         title: "Live MySQL → PostgreSQL migrationS",
         summary:
-            "Designed a campus network prototype including VLAN segmentation, routing strategy, and scalable coverage planning for a multi-floor environment.",
-        impact: "Scalable network segmentation",
+            "Achieved seamless live migrations from MySQL to PostgreSQL using logical replication and custom ETL scripts, minimizing downtime and ensuring data integrity.",
+        impact: "Database consistency • Speedy cutovers",
         tags: [
-            "VLANs",
-            "OSPF/EIGRP",
-            "Switching",
-            "Subnetting",
-            "Troubleshooting",
+            "MySQL",
+            "PostgreSQL",
+            "ETL",
+            "Data Migration",
+            "Scripting",
+            "Reliability",
         ],
         href: "/projects/db-migration",
     },
