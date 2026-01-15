@@ -41,7 +41,7 @@ const projects = [
         href: "/projects/cloudflare-tunnel",
     },
     {
-        title: "Network Design Case Study (VLANs, Routing, Campus)",
+        title: "Live MySQL → PostgreSQL migrationS",
         summary:
             "Designed a campus network prototype including VLAN segmentation, routing strategy, and scalable coverage planning for a multi-floor environment.",
         impact: "Scalable network segmentation",
