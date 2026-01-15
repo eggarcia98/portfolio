@@ -3,6 +3,9 @@
 /* Plugins */
 @plugin "@tailwindcss/typography";
 
+/* Enable dark mode variant */
+@custom-variant dark (&:where(.dark, .dark *));
+
 
 :root {
   --background: #ffffff;
