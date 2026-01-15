@@ -3,7 +3,7 @@ export const site = {
     title: "Erick Garcia | Software Engineer",
     description:
         "Software Engineer with Cloud & Networking foundations. I build reliable web systems and deploy them with modern cloud practices.",
-    url: "https://example.com", // TODO: replace when domain is decided
+    url: "https://portfolio-5mk.pages.dev", // TODO: replace when domain is decided
     locale: "en_AU",
     twitterHandle: "", // optional, like "@yourhandle"
 };
