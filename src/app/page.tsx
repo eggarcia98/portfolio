@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 import Link from "next/link";
 
 export default function HomePage() {
@@ -68,6 +69,7 @@ export default function HomePage() {
                     </div>
                 </div>
             </main>
+            <Footer />
         </div>
     );
 }
