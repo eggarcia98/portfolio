@@ -3,38 +3,69 @@ import Link from "next/link";
 
 export default function HomePage() {
     return (
-        <div className="min-h-dvh bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50">
+        <div className="min-h-dvh">
             <Navbar />
-            <main className="mx-auto max-w-5xl px-4 py-14">
+
+            <main className="container-page py-14">
                 <p className="text-sm text-slate-600 dark:text-slate-300">
                     Software Engineer | Cloud & Networking | Linux • Docker •
                     Cloudflare • GCP
                 </p>
 
-                <h1 className="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl">
-                    I build reliable web systems — and I understand how they run
-                    in real networks.
+                <h1 className="h1 mt-3">
+                    Software Engineer with Cloud & Networking foundations.
                 </h1>
 
-                <p className="mt-5 max-w-2xl text-base leading-7 text-slate-700 dark:text-slate-200">
-                    Backend-focused developer with infrastructure foundations. I
-                    enjoy designing and deploying systems that are secure,
-                    observable, and maintainable.
+                <p className="muted mt-5 max-w-2xl leading-7">
+                    I build backend systems and deploy them reliably. I focus on
+                    security, performance, and real-world troubleshooting—how
+                    software behaves in production networks.
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-3">
-                    <Link
-                        href="/projects"
-                        className="rounded-md bg-teal-600 px-4 py-2 text-sm font-medium text-white hover:bg-teal-700"
-                    >
+                    <Link href="/projects" className="btn btn-primary">
                         View Projects
                     </Link>
-                    <Link
-                        href="/contact"
-                        className="rounded-md bg-teal-600 px-4 py-2 text-sm font-medium text-white hover:bg-teal-700"
+
+                    <a
+                        href="/Erick_Garcia_Resume.pdf"
+                        download
+                        className="btn btn-secondary"
                     >
+                        Download Resume
+                    </a>
+
+                    <Link href="/contact" className="btn btn-secondary">
                         Contact
                     </Link>
+                </div>
+
+                {/* Subtle “proof” row */}
+                <div className="mt-12 grid gap-4 sm:grid-cols-3">
+                    <div className="surface p-5">
+                        <p className="text-sm text-slate-500 dark:text-slate-400">
+                            Domain experience
+                        </p>
+                        <p className="mt-2 font-semibold">
+                            Healthcare (HL7), ERP, live migrations
+                        </p>
+                    </div>
+                    <div className="surface p-5">
+                        <p className="text-sm text-slate-500 dark:text-slate-400">
+                            Cloud & Ops
+                        </p>
+                        <p className="mt-2 font-semibold">
+                            Cloud Run, Docker, CI/CD mindset
+                        </p>
+                    </div>
+                    <div className="surface p-5">
+                        <p className="text-sm text-slate-500 dark:text-slate-400">
+                            Networking
+                        </p>
+                        <p className="mt-2 font-semibold">
+                            VLANs, routing, troubleshooting
+                        </p>
+                    </div>
                 </div>
             </main>
         </div>

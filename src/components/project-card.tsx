@@ -18,7 +18,7 @@ export function ProjectCard({
     return (
         <Link
             href={href}
-            className="group block rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-800 dark:bg-slate-900"
+            className="surface group block p-5 transition hover:-translate-y-0.5 hover:shadow-md"
         >
             <div className="flex items-start justify-between gap-4">
                 <h3 className="text-lg font-semibold text-slate-900 group-hover:text-teal-700 dark:text-white dark:group-hover:text-teal-300">
@@ -44,10 +44,7 @@ export function ProjectCard({
 
             <div className="mt-4 flex flex-wrap gap-2">
                 {tags.map((t) => (
-                    <span
-                        key={t}
-                        className="rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-200"
-                    >
+                    <span key={t} className="chip">
                         {t}
                     </span>
                 ))}
