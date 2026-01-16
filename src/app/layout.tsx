@@ -65,7 +65,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body className="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50">
+            <body className="bg-white text-slate-900 dark:bg-[#0f0f1e] dark:text-slate-50">
                 <ThemeProvider>{children}</ThemeProvider>
             </body>
         </html>
