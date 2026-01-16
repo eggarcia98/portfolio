@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/navbar";
 import { ProjectCard } from "@/components/project-card";
+import { Footer } from "@/components/footer";
 
 const projects = [
     {
@@ -62,10 +63,10 @@ export default function ProjectsPage() {
         <div className="min-h-dvh">
             <Navbar />
 
-            <main className="container-page py-12">
-                <div className="flex flex-col gap-3">
-                    <h1 className="h2">Projects</h1>
-                    <p className="lead max-w-2xl ">
+            <main className="container-page py-14">
+                <div className="flex flex-col gap-4">
+                    <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">Projects</h1>
+                    <p className="lead max-w-2xl">
                         Recruiter-friendly case studies that focus on outcomes,
                         architecture, and trade-offs. Some source code is
                         private because it was developed in a professional
@@ -73,23 +74,25 @@ export default function ProjectsPage() {
                     </p>
                 </div>
 
-                <div className="mt-8 grid gap-5 sm:grid-cols-2">
+                <div className="mt-10 grid gap-5 sm:grid-cols-2">
                     {projects.map((p) => (
                         <ProjectCard key={p.href} {...p} />
                     ))}
                 </div>
 
-                <section className="mt-12 surface p-6">
-                    <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
+                <section className="mt-14 surface p-7">
+                    <p className="text-xs uppercase tracking-wide text-slate-400 dark:text-slate-500">Targets</p>
+                    <h2 className="mt-2 text-xl font-semibold tracking-tight text-slate-900 dark:text-white">
                         What I’m looking for
                     </h2>
-                    <p className="lead mt-2 ">
+                    <p className="lead mt-2">
                         Roles where development and infrastructure intersect:
                         backend engineering, cloud/DevOps support, or
                         networking-focused technician roles with automation.
                     </p>
                 </section>
             </main>
+            <Footer />
         </div>
     );
 }
