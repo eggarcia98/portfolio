@@ -32,7 +32,7 @@ export function Navbar() {
                     <a
                         href="/Erick_Garcia_Resume.pdf"
                         download
-                        className="btn btn-secondary"
+                        className="btn btn-secondary "
                     >
                         Resume
                     </a>

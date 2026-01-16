@@ -6,93 +6,90 @@
 /* Enable dark mode variant */
 @custom-variant dark (&:where(.dark, .dark *));
 
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #ffffff;
+    --foreground: #171717;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --color-accent: theme(colors.teal.600);
-  --radius: 14px;
-
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+    --color-accent: theme(colors.teal.600);
+    --radius: 14px;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
 }
-
 
 /* ---------- Design tokens (optional, clean) ---------- */
 /* ---------- Base styles ---------- */
 @layer base {
-  body {
-    @apply bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50;
-  }
+    body {
+        @apply bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50;
+    }
 }
 
 /* ---------- Component classes ---------- */
 @layer components {
-  .container-page {
-    @apply mx-auto max-w-5xl px-4;
-  }
 
-  .surface {
-    @apply rounded-xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900;
-  }
+    .container-page {
+        @apply mx-auto max-w-5xl px-4;
+    }
 
-  .muted {
-    @apply text-slate-700 dark:text-slate-200;
-  }
+    .surface {
+        @apply rounded-xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900;
+    }
 
-  .muted-2 {
-    @apply text-slate-600 dark:text-slate-300;
-  }
+    .muted {
+        @apply text-slate-700 dark:text-slate-200;
+    }
 
-  .btn {
-    @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition;
-  }
+    .muted-2 {
+        @apply text-slate-600 dark:text-slate-300;
+    }
 
+    .btn {
+        @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition;
+    }
 
-  .btn-primary {
-    @apply bg-teal-600 text-white hover:bg-teal-700;
-  }
+    .btn-primary {
+        @apply bg-teal-600 text-white hover:bg-teal-700;
+    }
 
-  .btn-secondary {
-    @apply border border-slate-200 text-slate-800 hover:bg-white dark:border-slate-800 dark:text-slate-100 dark:hover:bg-slate-900;
-  }
+    .btn-secondary {
+        @apply border border-slate-200 text-slate-800 hover:bg-white dark:border-slate-800 dark:text-slate-100 dark:hover:bg-slate-900;
+    }
 
-  .navlink {
-    @apply text-sm text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white;
-  }
+    .navlink {
+        @apply text-sm text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white;
+    }
 
-  .chip {
-    @apply rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-200;
-  }
+    .chip {
+        @apply rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs text-slate-700 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-200;
+    }
 
-  .h1 {
-    @apply text-4xl font-semibold tracking-tight sm:text-5xl;
-  }
+    .h1 {
+        @apply text-4xl font-semibold tracking-tight sm:text-5xl;
+    }
 
-  .h2 {
-    @apply text-3xl font-semibold tracking-tight sm:text-4xl;
-  }
+    .h2 {
+        @apply text-3xl font-semibold tracking-tight sm:text-4xl;
+    }
 
-  .article {
-    @apply prose prose-slate max-w-none
+    .article {
+        @apply prose prose-slate max-w-none
       prose-headings:tracking-tight
       prose-h2:mt-10 prose-h2:mb-3
       prose-p:leading-7
@@ -102,5 +99,5 @@ body {
       dark:prose-invert
       dark:prose-pre:border-slate-800 dark:prose-pre:bg-slate-950 dark:prose-pre:text-slate-100
       prose-a:text-teal-700 dark:prose-a:text-teal-300;
-  }
+    }
 }
