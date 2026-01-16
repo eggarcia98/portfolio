@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/navbar";
 import { ProjectCard } from "@/components/project-card";
 import { Footer } from "@/components/footer";
+import Link from "next/link";
 
 const projects = [
     {
@@ -63,18 +64,18 @@ export default function ProjectsPage() {
         <div className="min-h-dvh">
             <Navbar />
 
-            <main className="container-page py-14">
-                <div className="flex flex-col gap-4">
-                    <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">Projects</h1>
-                    <p className="lead max-w-2xl">
-                        Recruiter-friendly case studies that focus on outcomes,
-                        architecture, and trade-offs. Some source code is
-                        private because it was developed in a professional
-                        environment.
+            <main className="container-page py-16 lg:py-24">
+                <div className="max-w-4xl">
+                    <p className="text-sm font-semibold uppercase tracking-wider text-teal-600 dark:text-teal-400">
+                        Portfolio
+                    </p>
+                    <h1 className="h2 mt-4">Technical Projects</h1>
+                    <p className="lead mt-6">
+                        Case studies focused on outcomes and architecture decisions. Source code remains private due to professional constraints.
                     </p>
                 </div>
 
-                <div className="mt-10 grid gap-5 sm:grid-cols-2">
+                <div className="mt-12 grid gap-6 lg:grid-cols-2">
                     {projects.map((p) => (
                         <ProjectCard key={p.href} {...p} />
                     ))}
@@ -86,9 +87,7 @@ export default function ProjectsPage() {
                         What I’m looking for
                     </h2>
                     <p className="lead mt-2">
-                        Roles where development and infrastructure intersect:
-                        backend engineering, cloud/DevOps support, or
-                        networking-focused technician roles with automation.
+                        Backend engineering, Cloud/DevOps, or Technical Support roles that combine development and infrastructure work.
                     </p>
                 </section>
             </main>

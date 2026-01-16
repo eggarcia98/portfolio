@@ -19,65 +19,78 @@ export default function AboutPage() {
     return (
         <div className="min-h-dvh bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50">
             <Navbar />
-            <main className="container-page py-14">
-                <h1 className="h2">
-                    About
-                </h1>
+            <main className="container-page py-16 lg:py-24">
+                <div className="max-w-4xl">
+                    <p className="text-sm font-semibold uppercase tracking-wider text-teal-600 dark:text-teal-400">
+                        About Me
+                    </p>
+                    <h1 className="h2 mt-4">
+                        Backend engineer building reliable systems
+                    </h1>
+                </div>
 
-                <div className="mt-8 grid gap-12 md:grid-cols-3">
-                    <section className="md:col-span-2">
+                <div className="mt-12 grid gap-12 lg:grid-cols-3 lg:gap-16">
+                    <section className="lg:col-span-2">
                         <p className="lead">
-                            I’m Erick Garcia, a software engineer with strong
-                            foundations in cloud and networking. I enjoy
-                            building backend systems and deploying them
-                            reliably—thinking about security, performance, and
-                            how software behaves in real networks.
+                            I'm Erick Garcia, a backend engineer focused on production reliability, cloud deployments, and database performance. I've built systems handling healthcare integrations, ERP middleware, and live database migrations without downtime.
                         </p>
 
-                        <p className="lead mt-4">
-                            I’ve worked on production systems involving
-                            PostgreSQL performance, cloud deployments
-                            (Docker/GCP), and integrations (HL7, ERP
-                            middleware). I’m also studying Telecommunications
-                            Engineering, which reinforces my practical
-                            networking skills.
+                        <p className="lead mt-6">
+                            2+ years building and supporting production systems at scale. Comfortable across the stack: TypeScript/Node, PostgreSQL optimization, Docker, Google Cloud, and networking fundamentals. Currently studying Telecommunications Engineering.
                         </p>
 
-                        <div className="mt-8 flex flex-wrap gap-3">
+                        <div className="mt-10 flex flex-wrap gap-4">
                             <Link
                                 href="/projects"
                                 className="btn btn-primary"
                             >
-                                View projects
+                                View Projects
                             </Link>
                             <Link
                                 href="/contact"
                                 className="btn btn-secondary"
                             >
-                                Contact
+                                Get in Touch
                             </Link>
                         </div>
                     </section>
 
-                    <aside className="surface p-6">
-                        <h2 className="text-sm font-semibold text-slate-900 dark:text-white">
-                            Focus areas
-                        </h2>
-                        <ul className="mt-3 space-y-2 text-sm text-slate-700 dark:text-slate-200">
-                            <li>• Backend & APIs (TypeScript/Node, SQL)</li>
-                            <li>• Cloud & DevOps (Docker, CI/CD, GCP)</li>
-                            <li>
-                                • Networking (VLANs, routing, troubleshooting)
-                            </li>
-                            <li>• Reliability & operations mindset</li>
-                        </ul>
+                    <aside className="space-y-8">
+                        <div className="surface p-6">
+                            <h2 className="text-base font-bold text-slate-900 dark:text-white">
+                                Core Skills
+                            </h2>
+                            <ul className="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                                <li className="flex items-start">
+                                    <span className="mr-2 text-teal-600 dark:text-teal-400">•</span>
+                                    <span>Backend (TypeScript, Node, Python, SQL)</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="mr-2 text-teal-600 dark:text-teal-400">•</span>
+                                    <span>Databases (PostgreSQL, MySQL optimization)</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="mr-2 text-teal-600 dark:text-teal-400">•</span>
+                                    <span>Cloud & DevOps (Docker, GCP, CI/CD)</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="mr-2 text-teal-600 dark:text-teal-400">•</span>
+                                    <span>Production troubleshooting & reliability</span>
+                                </li>
+                            </ul>
+                        </div>
 
-                        <h2 className="mt-6 text-sm font-semibold text-slate-900 dark:text-white">
-                            Location
-                        </h2>
-                        <p className="mt-2 text-sm text-slate-700 dark:text-slate-200">
-                            Brisbane, Australia (open to global opportunities)
-                        </p>
+                        <div className="surface p-6">
+                            <h2 className="text-base font-bold text-slate-900 dark:text-white">
+                                Location
+                            </h2>
+                            <p className="mt-3 text-sm text-slate-600 dark:text-slate-300">
+                                Brisbane, Australia
+                            </p>
+                            <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
+                                Open to remote opportunities
+                            </p>
+                        </div>
                     </aside>
                 </div>
             </main>
