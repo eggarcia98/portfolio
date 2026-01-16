@@ -65,7 +65,7 @@ export default function ProjectsPage() {
             <main className="container-page py-12">
                 <div className="flex flex-col gap-3">
                     <h1 className="h2">Projects</h1>
-                    <p className="muted max-w-2xl leading-7">
+                    <p className="lead max-w-2xl ">
                         Recruiter-friendly case studies that focus on outcomes,
                         architecture, and trade-offs. Some source code is
                         private because it was developed in a professional
@@ -83,7 +83,7 @@ export default function ProjectsPage() {
                     <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
                         What I’m looking for
                     </h2>
-                    <p className="muted mt-2 leading-7">
+                    <p className="lead mt-2 ">
                         Roles where development and infrastructure intersect:
                         backend engineering, cloud/DevOps support, or
                         networking-focused technician roles with automation.

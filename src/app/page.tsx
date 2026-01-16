@@ -17,7 +17,7 @@ export default function HomePage() {
                     Software Engineer with Cloud & Networking foundations.
                 </h1>
 
-                <p className="muted mt-5 max-w-2xl leading-7">
+                <p className="lead mt-5 max-w-2xl">
                     I build backend systems and deploy them reliably. I focus on
                     security, performance, and real-world troubleshooting—how
                     software behaves in production networks.
@@ -42,13 +42,13 @@ export default function HomePage() {
                 </div>
 
                 {/* Featured Projects */}
-                <section className="mt-14">
+                <section className="section">
                     <div className="flex items-end justify-between gap-4">
                         <div>
                             <h2 className="text-xl font-semibold text-slate-900 dark:text-white">
                                 Featured work
                             </h2>
-                            <p className="muted-2 mt-1">
+                            <p className="lead mt-1">
                                 A quick look at projects that show reliability,
                                 cloud, and networking.
                             </p>
@@ -71,7 +71,7 @@ export default function HomePage() {
                             <h3 className="mt-2 text-2xl font-semibold text-slate-900 group-hover:text-teal-700 dark:text-white dark:group-hover:text-teal-300">
                                 Live Database Migration: MySQL → PostgreSQL
                             </h3>
-                            <p className="muted mt-3 max-w-2xl leading-7">
+                            <p className="lead mt-3 max-w-2xl leading-7">
                                 Automated a live production migration with
                                 validation gates and rollback planning to avoid
                                 downtime and protect data integrity.
@@ -97,7 +97,7 @@ export default function HomePage() {
                                 <h3 className="mt-2 text-lg font-semibold text-slate-900 group-hover:text-teal-700 dark:text-white dark:group-hover:text-teal-300">
                                     HL7 Proxy on Cloud Run
                                 </h3>
-                                <p className="muted mt-2 leading-7">
+                                <p className="lead mt-2 leading-7">
                                     Transforms HL7 analyzer output into JSON for
                                     ingestion. Designed for scale and
                                     reliability.
@@ -119,7 +119,7 @@ export default function HomePage() {
                                 <h3 className="mt-2 text-lg font-semibold text-slate-900 group-hover:text-teal-700 dark:text-white dark:group-hover:text-teal-300">
                                     Next.js behind CGNAT with Cloudflare Tunnel
                                 </h3>
-                                <p className="muted mt-2 leading-7">
+                                <p className="lead mt-2 leading-7">
                                     Public HTTPS without port forwarding. Great
                                     example of real-world deployment
                                     constraints.

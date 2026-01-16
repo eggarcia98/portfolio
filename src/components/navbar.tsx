@@ -15,7 +15,7 @@ const NavLink = ({
 
 export function Navbar() {
     return (
-        <header className="border-b border-slate-200 bg-white/80 backdrop-blur dark:border-slate-800 dark:bg-slate-950/70">
+        <header className="border-b border-slate-200/70 bg-white/70 backdrop-blur dark:border-slate-800/70 dark:bg-slate-950/60">
             <div className="container-page flex items-center justify-between py-3">
                 <Link
                     href="/"
