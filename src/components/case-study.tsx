@@ -9,8 +9,8 @@ type Props = {
 
 export function CaseStudy({ title, subtitle, stack, children }: Props) {
     return (
-        <div className="min-h-dvh bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50">
-            <header className="border-b border-slate-200 bg-white/80 backdrop-blur dark:border-slate-800 dark:bg-slate-950/70">
+        <div className="min-h-dvh">
+            <header className="border-b border-slate-200 bg-white/80 backdrop-blur dark:border-slate-800 dark:bg-slate-900/40">
                 <div className="container-page py-6">
                     <Link
                         href="/projects"

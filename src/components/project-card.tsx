@@ -29,7 +29,7 @@ export function ProjectCard({
                 </span>
             </div>
 
-            <p className="mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-300">
+            <p className="mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-200">
                 {summary}
             </p>
 
