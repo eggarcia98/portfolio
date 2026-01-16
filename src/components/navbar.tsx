@@ -30,6 +30,13 @@ export function Navbar() {
                     <NavLink href="/projects">Projects</NavLink>
                     <NavLink href="/about">About</NavLink>
                     <NavLink href="/contact">Contact</NavLink>
+                    <a
+                        href="/Erick_Garcia_Resume.pdf"
+                        download
+                        className="btn btn-primary"
+                    >
+                        Download Resume
+                    </a>
                     <ThemeToggle />
                 </nav>
             </div>
