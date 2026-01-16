@@ -27,20 +27,11 @@ export default function AboutPage() {
                 <div className="mt-8 grid gap-12 md:grid-cols-3">
                     <section className="md:col-span-2">
                         <p className="lead">
-                            I’m Erick Garcia, a software engineer with strong
-                            foundations in cloud and networking. I enjoy
-                            building backend systems and deploying them
-                            reliably—thinking about security, performance, and
-                            how software behaves in real networks.
+                            I'm Erick Garcia, a backend engineer focused on production reliability, cloud deployments, and database performance. I've built systems handling healthcare integrations, ERP middleware, and live database migrations without downtime.
                         </p>
 
                         <p className="lead mt-4">
-                            I’ve worked on production systems involving
-                            PostgreSQL performance, cloud deployments
-                            (Docker/GCP), and integrations (HL7, ERP
-                            middleware). I’m also studying Telecommunications
-                            Engineering, which reinforces my practical
-                            networking skills.
+                            2+ years building and supporting production systems at scale. Comfortable across the stack: TypeScript/Node, PostgreSQL optimization, Docker, Google Cloud, and networking fundamentals. Currently studying Telecommunications Engineering.
                         </p>
 
                         <div className="mt-8 flex flex-wrap gap-3">
@@ -61,15 +52,13 @@ export default function AboutPage() {
 
                     <aside className="surface p-6">
                         <h2 className="text-sm font-semibold text-slate-900 dark:text-white">
-                            Focus areas
+                            Core skills
                         </h2>
                         <ul className="mt-3 space-y-2 text-sm text-slate-700 dark:text-slate-200">
-                            <li>• Backend & APIs (TypeScript/Node, SQL)</li>
-                            <li>• Cloud & DevOps (Docker, CI/CD, GCP)</li>
-                            <li>
-                                • Networking (VLANs, routing, troubleshooting)
-                            </li>
-                            <li>• Reliability & operations mindset</li>
+                            <li>• Backend (TypeScript, Node, Python, SQL)</li>
+                            <li>• Databases (PostgreSQL, MySQL optimization)</li>
+                            <li>• Cloud & DevOps (Docker, GCP, CI/CD)</li>
+                            <li>• Production troubleshooting & reliability</li>
                         </ul>
 
                         <h2 className="mt-6 text-sm font-semibold text-slate-900 dark:text-white">

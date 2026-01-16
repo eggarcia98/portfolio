@@ -9,18 +9,15 @@ export default function HomePage() {
 
             <main className="container-page py-16">
                 <p className="text-sm font-medium text-slate-500 dark:text-slate-400">
-                    Software Engineer | Cloud & Networking | Linux • Docker •
-                    Cloudflare • GCP
+                    Backend Engineer | Cloud & DevOps | PostgreSQL • Docker • GCP
                 </p>
 
                 <h1 className="h1 mt-4">
-                    Software Engineer with Cloud & Networking foundations.
+                    Backend engineer & cloud architect.
                 </h1>
 
                 <p className="lead mt-6 max-w-2xl">
-                    I build backend systems and deploy them reliably. I focus on
-                    security, performance, and real-world troubleshooting—how
-                    software behaves in production networks.
+                    I build production systems focused on reliability, performance, and scale. PostgreSQL optimization, Docker deployments, healthcare integrations, and cloud infrastructure.
                 </p>
 
                 <div className="mt-10 flex flex-wrap items-center gap-3">

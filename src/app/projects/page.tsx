@@ -67,10 +67,7 @@ export default function ProjectsPage() {
                 <div className="flex flex-col gap-4">
                     <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">Projects</h1>
                     <p className="lead max-w-2xl">
-                        Recruiter-friendly case studies that focus on outcomes,
-                        architecture, and trade-offs. Some source code is
-                        private because it was developed in a professional
-                        environment.
+                        Case studies focused on outcomes and architecture decisions. Source code remains private due to professional constraints.
                     </p>
                 </div>
 
@@ -86,9 +83,7 @@ export default function ProjectsPage() {
                         What I’m looking for
                     </h2>
                     <p className="lead mt-2">
-                        Roles where development and infrastructure intersect:
-                        backend engineering, cloud/DevOps support, or
-                        networking-focused technician roles with automation.
+                        Backend engineering, Cloud/DevOps, or Technical Support roles that combine development and infrastructure work.
                     </p>
                 </section>
             </main>
