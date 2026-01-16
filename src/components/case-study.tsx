@@ -39,9 +39,7 @@ export function CaseStudy({ title, subtitle, stack, children }: Props) {
             </header>
 
             <main className="mx-auto max-w-5xl px-4 py-10">
-                <article className="prose prose-slate max-w-none dark:prose-invert prose-a:text-teal-700 dark:prose-a:text-teal-300">
-                    {children}
-                </article>
+                <article className="article">{children}</article>
             </main>
         </div>
     );
