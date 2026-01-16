@@ -2,6 +2,8 @@
 
 A modern web portfolio built with Next.js, showcasing projects and case studies.
 
+**Live:** [https://portfolio-5mk.pages.dev/](https://portfolio-5mk.pages.dev/)
+
 ## Tech Stack
 
 - **Framework:** Next.js
