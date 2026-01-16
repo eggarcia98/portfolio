@@ -7,23 +7,23 @@ export default function HomePage() {
         <div className="min-h-dvh">
             <Navbar />
 
-            <main className="container-page py-14">
-                <p className="text-sm text-slate-600 dark:text-slate-300">
+            <main className="container-page py-16">
+                <p className="text-sm font-medium text-slate-500 dark:text-slate-400">
                     Software Engineer | Cloud & Networking | Linux • Docker •
                     Cloudflare • GCP
                 </p>
 
-                <h1 className="h1 mt-3">
+                <h1 className="h1 mt-4">
                     Software Engineer with Cloud & Networking foundations.
                 </h1>
 
-                <p className="lead mt-5 max-w-2xl">
+                <p className="lead mt-6 max-w-2xl">
                     I build backend systems and deploy them reliably. I focus on
                     security, performance, and real-world troubleshooting—how
                     software behaves in production networks.
                 </p>
 
-                <div className="mt-8 flex flex-wrap gap-3">
+                <div className="mt-10 flex flex-wrap items-center gap-3">
                     <Link href="/projects" className="btn btn-primary">
                         View Projects
                     </Link>
@@ -42,10 +42,10 @@ export default function HomePage() {
                 </div>
 
                 {/* Featured Projects */}
-                <section className="section">
+                <section className="section section-tight">
                     <div className="flex items-end justify-between gap-4">
                         <div>
-                            <h2 className="text-xl font-semibold text-slate-900 dark:text-white">
+                            <h2 className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-white">
                                 Featured work
                             </h2>
                             <p className="lead mt-1">
@@ -63,12 +63,12 @@ export default function HomePage() {
                         {/* Big featured card */}
                         <Link
                             href="/projects/db-migration"
-                            className="surface group p-6 transition hover:-translate-y-0.5 hover:shadow-md lg:col-span-2"
+                            className="surface group p-6 transition hover:shadow-md lg:col-span-2"
                         >
-                            <p className="text-xs text-slate-500 dark:text-slate-400">
+                            <p className="text-xs uppercase tracking-wide text-slate-400 dark:text-slate-500">
                                 Featured case study
                             </p>
-                            <h3 className="mt-2 text-2xl font-semibold text-slate-900 group-hover:text-teal-700 dark:text-white dark:group-hover:text-teal-300">
+                            <h3 className="mt-2 text-2xl font-semibold text-slate-900 dark:text-white">
                                 Live Database Migration: MySQL → PostgreSQL
                             </h3>
                             <p className="lead mt-3 max-w-2xl leading-7">
@@ -89,12 +89,12 @@ export default function HomePage() {
                         <div className="grid gap-5">
                             <Link
                                 href="/projects/hl7-proxy"
-                                className="surface group p-6 transition hover:-translate-y-0.5 hover:shadow-md"
+                                className="surface group p-6 transition hover:shadow-md"
                             >
                                 <p className="text-xs text-slate-500 dark:text-slate-400">
                                     Cloud Run · Stateless
                                 </p>
-                                <h3 className="mt-2 text-lg font-semibold text-slate-900 group-hover:text-teal-700 dark:text-white dark:group-hover:text-teal-300">
+                                <h3 className="mt-2 text-lg font-semibold text-slate-900 dark:text-white">
                                     HL7 Proxy on Cloud Run
                                 </h3>
                                 <p className="lead mt-2 leading-7">
@@ -111,12 +111,12 @@ export default function HomePage() {
 
                             <Link
                                 href="/projects/cloudflare-tunnel"
-                                className="surface group p-6 transition hover:-translate-y-0.5 hover:shadow-md"
+                                className="surface group p-6 transition hover:shadow-md"
                             >
                                 <p className="text-xs text-slate-500 dark:text-slate-400">
                                     Networking · Security
                                 </p>
-                                <h3 className="mt-2 text-lg font-semibold text-slate-900 group-hover:text-teal-700 dark:text-white dark:group-hover:text-teal-300">
+                                <h3 className="mt-2 text-lg font-semibold text-slate-900 dark:text-white">
                                     Next.js behind CGNAT with Cloudflare Tunnel
                                 </h3>
                                 <p className="lead mt-2 leading-7">
