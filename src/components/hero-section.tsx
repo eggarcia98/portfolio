@@ -87,7 +87,7 @@ export default function HeroSection() {
                         </div>
 
                         {/* Quick stats */}
-                        <div className="mt-8 grid grid-cols-3 gap-8 border-t border-slate-200 pt-8 dark:border-slate-800">
+                        <div className="mt-8 lg:grid grid-cols-3 lg:gap-8 border-t border-slate-200 pt-8 dark:border-slate-800 flex justify-between">
                             <div>
                                 <div className="text-3xl font-bold text-slate-900 dark:text-white">
                                     2+
