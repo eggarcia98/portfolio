@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { useState } from "react";
 
@@ -31,8 +32,22 @@ export function Navbar() {
                     <Link
                         href="/"
                         onClick={closeMobileMenu}
-                        className="text-lg font-bold text-slate-900 transition-colors hover:text-teal-600 dark:text-white dark:hover:text-teal-400"
+                        className="flex items-center gap-3 text-lg font-bold text-slate-900 transition-colors hover:text-teal-600 dark:text-white dark:hover:text-teal-400"
                     >
+                        <Image
+                            src="/light-logo.svg"
+                            alt="Logo"
+                            width={32}
+                            height={32}
+                            className="dark:hidden"
+                        />
+                        <Image
+                            src="/dark-logo.svg"
+                            alt="Logo"
+                            width={32}
+                            height={32}
+                            className="hidden dark:block"
+                        />
                         Erick Garcia
                     </Link>
 
