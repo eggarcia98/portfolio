@@ -88,7 +88,7 @@ export default function FeaturedProjects() {
                 </div>
             </div>
 
-            <div className="mt-8 text-center">
+            <div className="m-8 text-center">
                 <Link
                     href="/projects"
                     className="inline-flex items-center text-sm font-medium text-teal-600 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300"
