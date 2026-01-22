@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
     return (
-        <section className="relative pt-8 lg:pt-32">
+        <section className="relative pt-8 lg:pt-28">
             {/* Background decoration */}
             <div className="absolute inset-0 -z-10 overflow-hidden">
                 <div className="absolute left-[50%] top-0 h-125 w-125 -translate-x-1/2 rounded-full bg-teal-500/5 blur-3xl"></div>
