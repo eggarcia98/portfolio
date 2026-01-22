@@ -40,6 +40,7 @@ export function Navbar() {
                             width={32}
                             height={32}
                             className="dark:hidden"
+                            priority
                         />
                         <Image
                             src="/dark-logo.svg"
@@ -47,6 +48,7 @@ export function Navbar() {
                             width={32}
                             height={32}
                             className="hidden dark:block"
+                            priority
                         />
                         Erick Garcia
                     </Link>
