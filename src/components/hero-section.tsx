@@ -1,9 +1,8 @@
 import Link from "next/link";
 
 export default function HeroSection() {
-    
     return (
-        <section className="relative py-8 lg:py-32">
+        <section className="relative pt-8 lg:pt-32">
             {/* Background decoration */}
             <div className="absolute inset-0 -z-10 overflow-hidden">
                 <div className="absolute left-[50%] top-0 h-125 w-125 -translate-x-1/2 rounded-full bg-teal-500/5 blur-3xl"></div>
@@ -35,7 +34,7 @@ export default function HeroSection() {
                         </p>
 
                         {/* CTA Buttons */}
-                        <div className="mt-10 flex flex-wrap items-center gap-4">
+                        <div className="mt-6 flex flex-wrap items-center gap-4">
                             <Link
                                 href="/projects"
                                 className="btn btn-primary text-base"
@@ -62,11 +61,13 @@ export default function HeroSection() {
                             >
                                 Get in Touch
                             </Link>
-
+                        </div>
+                        <div className="flex justify-end mt-6">
                             <a
                                 href="/Erick_Garcia_Resume.pdf"
                                 download
-                                className="group inline-flex items-center text-sm font-medium text-slate-600 transition-colors hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"
+                                className="group inline-flex items-center text-sm font-medium text-teal-700 transition-colors hover:text-teal-900 dark:text-slate-400 dark:hover:text-white
+                                border rounded-md p-2"
                             >
                                 <svg
                                     className="mr-2 h-5 w-5"
@@ -86,7 +87,7 @@ export default function HeroSection() {
                         </div>
 
                         {/* Quick stats */}
-                        <div className="mt-16 grid grid-cols-3 gap-8 border-t border-slate-200 pt-8 dark:border-slate-800">
+                        <div className="mt-8 grid grid-cols-3 gap-8 border-t border-slate-200 pt-8 dark:border-slate-800">
                             <div>
                                 <div className="text-3xl font-bold text-slate-900 dark:text-white">
                                     2+
