@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function FeaturedProjects() {
     return (
         <section className="section">
-            <div className="mb-12">
+            <div >
                 <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white lg:text-4xl">
                     Featured Work
                 </h2>
@@ -13,7 +13,7 @@ export default function FeaturedProjects() {
                 </p>
             </div>
 
-            <div className="grid gap-6 lg:grid-cols-12">
+            <div className="grid gap-6 lg:grid-cols-12 my-6">
                 {/* Big featured card */}
                 <Link
                     href="/projects/db-migration"
