@@ -2,7 +2,7 @@
 
 A modern web portfolio built with Next.js, showcasing projects and case studies.
 
-**Live:** [https://portfolio-5mk.pages.dev/](https://portfolio-5mk.pages.dev/)
+**Live:** [https://portfolio.byerick.dev/](https://portfolio.byerick.dev/)
 
 ## Tech Stack
 
@@ -11,7 +11,7 @@ A modern web portfolio built with Next.js, showcasing projects and case studies.
 - **Styling:** CSS
 - **Package Manager:** pnpm
 
-
+`
 ## Installation
 
 ```bash
@@ -32,3 +32,4 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 pnpm run build
 pnpm start
 ```
+`
