@@ -113,10 +113,10 @@
         @apply prose prose-slate max-w-none
       prose-headings:tracking-tight
       prose-h2:mt-12 prose-h2:mb-4
-      prose-p:leading-relaxed prose-p:text-lg
-      prose-li:leading-relaxed
+      prose-p:leading-relaxed prose-p:text-base sm:prose-p:text-lg
+      prose-li:leading-relaxed prose-li:text-base sm:prose-li:text-lg
       prose-pre:rounded-xl prose-pre:border prose-pre:border-slate-200 prose-pre:bg-slate-50
-      prose-pre:text-slate-900
+      prose-pre:text-slate-900 prose-pre:text-sm sm:prose-pre:text-base
       dark:prose-invert
       dark:prose-headings:text-slate-50
       dark:prose-p:text-slate-200

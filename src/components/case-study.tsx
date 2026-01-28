@@ -10,8 +10,8 @@ type Props = {
 export function CaseStudy({ title, subtitle, stack, children }: Props) {
     return (
         <div className="min-h-dvh">
-            <header className="border-b border-slate-200 bg-white/80 backdrop-blur dark:border-slate-800 dark:bg-slate-900/40 sticky top-0 z-30">
-                <div className="container-page py-8">
+            <header className="border-b border-slate-200 bg-white/80 backdrop-blur shadow-sm dark:border-slate-800 dark:bg-slate-900/40 sticky top-0 z-30">
+                <div className="container-page py-3 sm:py-4">
                     <Link
                         href="/projects"
                         className="navlink inline-flex items-center gap-1 text-teal-700 dark:text-teal-300 hover:text-teal-900 dark:hover:text-teal-200 transition-colors"
@@ -21,14 +21,11 @@ export function CaseStudy({ title, subtitle, stack, children }: Props) {
                         </svg>
                         Back to projects
                     </Link>
-                    <h1 className="mt-6 text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-4xl lg:text-5xl">
+                    <h1 className="mt-3 text-lg font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-xl lg:text-2xl">
                         {title}
                     </h1>
-                    <p className="mt-4 max-w-3xl text-lg font-light leading-relaxed text-slate-600 dark:text-slate-300">
-                        {subtitle}
-                    </p>
 
-                    <div className="mt-8 flex flex-wrap gap-2">
+                    <div className="mt-3 flex flex-wrap gap-2">
                         {stack.map((s) => (
                             <span
                                 key={s}
