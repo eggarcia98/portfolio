@@ -14,19 +14,19 @@ export default function HeroSection() {
                     <div className="lg:col-span-7">
                         <div className="inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-50 px-4 py-1.5 dark:border-teal-900/30 dark:bg-teal-900/20">
                             <div className="h-2 w-2 animate-pulse rounded-full bg-teal-600 dark:bg-teal-400"></div>
-                            <span className="text-sm font-semibold text-teal-700 dark:text-teal-300">
+                            <span className="text-sm font-medium text-teal-700 dark:text-teal-300">
                                 Available for opportunities
                             </span>
                         </div>
 
-                        <h1 className="mt-8 text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl lg:leading-tight">
+                        <h1 className="mt-8 text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl lg:leading-tight">
                             Backend Engineer
                             <span className="mt-2 block text-teal-600 dark:text-teal-400">
                                 Building Reliable Systems
                             </span>
                         </h1>
 
-                        <p className="mt-8 text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+                        <p className="mt-8 text-lg font-light leading-relaxed text-slate-600 dark:text-slate-300">
                             Specializing in production systems, database
                             optimization, and cloud infrastructure. I build
                             backend solutions that scale with precision and
