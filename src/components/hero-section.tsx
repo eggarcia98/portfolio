@@ -1,6 +1,44 @@
 import Link from "next/link";
 import { Code, Database, Cloud, Wrench, Download } from "lucide-react";
 
+const techStacks = [
+    {
+        name: "Backend",
+        icon: Code,
+        technologies: ["TypeScript", "Node.js", "Python"],
+    },
+    {
+        name: "Databases",
+        icon: Database,
+        technologies: ["PostgreSQL", "MySQL", "Redis"],
+    },
+    {
+        name: "Cloud",
+        icon: Cloud,
+        technologies: ["Docker", "GCP", "CI/CD"],
+    },
+    {
+        name: "Tools",
+        icon: Wrench,
+        technologies: ["Git", "REST APIs", "Linux"],
+    },
+];
+
+const experienceStats = [
+    {
+        label: "Years Developing",
+        value: "3+",
+    },
+    {
+        label: "Major Projects",
+        value: "4",
+    },
+    {
+        label: "System Uptime",
+        value: "99%",
+    },
+];
+
 export default function HeroSection() {
     return (
         <section className="relative pt-12 pb-16 lg:pt-16 lg:pb-24 bg-linear-to-b from-slate-50/50 to-transparent dark:from-slate-900/30 dark:to-transparent">
@@ -52,81 +90,32 @@ export default function HeroSection() {
                         </div>
                     </div>
 
-                    {/* Right Column - Tech Cards Stacked */}
+                    {/* Tech Cards Stacked */}
                     <div className="flex flex-col gap-4 row-span-4 h-full ">
-                        {/* Backend */}
-                        <div className="surface p-6 w-full h-full">
-                            <div className="flex items-center gap-3 mb-4">
-                                <Code className="h-5 w-5 text-teal-600 dark:text-teal-400" />
-                                <h3 className="text-xs font-semibold uppercase tracking-widest text-slate-700 dark:text-slate-200">
-                                    Backend
-                                </h3>
-                            </div>
+                        {techStacks.map((stack) => (
+                            <div
+                                key={stack.name}
+                                className="surface p-6 w-full h-full"
+                            >
+                                <div className="flex items-center gap-3 mb-4">
+                                    <stack.icon className="h-5 w-5 dark:text-teal-400" />
+                                    <h3 className="text-xs font-semibold uppercase tracking-widest text-slate-700 dark:text-slate-200">
+                                        {stack.name}
+                                    </h3>
+                                </div>
 
-                            <div className="flex flex-wrap gap-2">
-                                {["TypeScript", "Node.js", "Python"].map(
-                                    (t) => (
+                                <div className="flex flex-wrap gap-2">
+                                    {stack.technologies.map((t) => (
                                         <span
                                             key={t}
                                             className="chip text-xs h-fit"
                                         >
                                             {t}
                                         </span>
-                                    ),
-                                )}
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-
-                        {/* Databases */}
-                        <div className="surface p-6 w-full h-full">
-                            <div className="flex items-center gap-3 mb-4">
-                                <Database className="h-5 w-5 text-teal-600 dark:text-teal-400" />
-                                <h3 className="text-xs font-semibold uppercase tracking-widest text-slate-700 dark:text-slate-200">
-                                    Databases
-                                </h3>
-                            </div>
-                            <div className="flex flex-wrap gap-2">
-                                {["PostgreSQL", "MySQL", "Redis"].map((t) => (
-                                    <span key={t} className="chip text-xs">
-                                        {t}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Cloud */}
-                        <div className="surface p-6 w-full h-full">
-                            <div className="flex items-center gap-3 mb-4">
-                                <Cloud className="h-5 w-5 text-teal-600 dark:text-teal-400" />
-                                <h3 className="text-xs font-semibold uppercase tracking-widest text-slate-700 dark:text-slate-200">
-                                    Cloud
-                                </h3>
-                            </div>
-                            <div className="flex flex-wrap gap-2">
-                                {["Docker", "GCP", "CI/CD"].map((t) => (
-                                    <span key={t} className="chip text-xs">
-                                        {t}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Tools */}
-                        <div className="surface p-6 w-full h-full">
-                            <div className="flex items-center gap-3 mb-4">
-                                <Wrench className="h-5 w-5 text-teal-600 dark:text-teal-400" />
-                                <h3 className="text-xs font-semibold uppercase tracking-widest text-slate-700 dark:text-slate-200">
-                                    Tools
-                                </h3>
-                            </div>
-                            <div className="flex flex-wrap gap-2">
-                                {["Git", "REST APIs", "Linux"].map((t) => (
-                                    <span key={t} className="chip text-xs">
-                                        {t}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
+                        ))}
                     </div>
 
                     {/* Experience Stats */}
@@ -135,30 +124,16 @@ export default function HeroSection() {
                             Experience
                         </h3>
                         <div className="flex gap-6 text-2xl">
-                            <div>
-                                <div className=" font-extrabold text-slate-900 dark:text-white">
-                                    3+
+                            {experienceStats.map((stat) => (
+                                <div key={stat.label} className="">
+                                    <div className="font-extrabold text-slate-900 dark:text-white">
+                                        {stat.value}
+                                    </div>
+                                    <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">
+                                        {stat.label}
+                                    </p>
                                 </div>
-                                <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">
-                                    Years Developing
-                                </p>
-                            </div>
-                            <div>
-                                <div className=" font-extrabold text-slate-900 dark:text-white">
-                                    4
-                                </div>
-                                <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">
-                                    Major Projects
-                                </p>
-                            </div>
-                            <div>
-                                <div className=" font-extrabold text-slate-900 dark:text-white">
-                                    99%
-                                </div>
-                                <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">
-                                    System Uptime
-                                </p>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </div>
