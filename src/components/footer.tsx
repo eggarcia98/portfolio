@@ -6,9 +6,9 @@ export function Footer() {
 
     return (
         <footer className="border-t border-slate-200 dark:border-slate-800">
-            <div className="mx-auto max-w-6xl px-6 py-12 lg:grid lg:grid-cols-[3fr_2fr] lg:gap-8">
+            <div className="mx-auto max-w-6xl px-6 py-12 lg:grid lg:grid-cols-2 lg:gap-8">
                 {/* Branding section */}
-                <div className="mb-8 lg:mb-12 w-full">
+                <div className=" w-full">
                     <Link
                         href="/"
                         className="inline-flex items-center gap-3 mb-6"
@@ -29,7 +29,7 @@ export function Footer() {
                 </div>
 
                 {/* Navigation grid - 3 columns on mobile */}
-                <div className="grid gap-8 grid-cols-3 lg:gap-16 mb-8">
+                <div className="grid gap-8 grid-cols-3 lg:gap-16 ">
                     {/* Navigation */}
                     <div>
                         <h4 className="text-xs font-semibold uppercase tracking-widest text-slate-900 dark:text-white mb-4">
