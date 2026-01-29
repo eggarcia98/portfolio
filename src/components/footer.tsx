@@ -6,17 +6,25 @@ export function Footer() {
 
     return (
         <footer className="border-t border-slate-200 dark:border-slate-800">
-            <div className="mx-auto max-w-6xl px-6 py-12 lg:py-16">
+            <div className="mx-auto max-w-6xl px-6 py-12 lg:grid lg:grid-cols-[3fr_2fr] lg:gap-8">
                 {/* Branding section */}
-                <div className="mb-8 lg:mb-12">
-                    <Link href="/" className="inline-flex items-center gap-3 mb-6">
+                <div className="mb-8 lg:mb-12 w-full">
+                    <Link
+                        href="/"
+                        className="inline-flex items-center gap-3 mb-6"
+                    >
                         <div className="h-10 w-10 rounded-full bg-teal-600 dark:bg-teal-500 flex items-center justify-center flex-shrink-0">
-                            <span className="text-white font-extrabold text-sm">EG</span>
+                            <span className="text-white font-extrabold text-sm">
+                                EG
+                            </span>
                         </div>
-                        <span className="text-lg font-extrabold text-slate-900 dark:text-white">Erick Garcia</span>
+                        <span className="text-lg font-extrabold text-slate-900 dark:text-white">
+                            Erick Garcia
+                        </span>
                     </Link>
                     <p className="text-sm font-light text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl">
-                        Backend engineer specializing in production systems, database optimization, and cloud infrastructure.
+                        Backend engineer specializing in production systems,
+                        database optimization, and cloud infrastructure.
                     </p>
                 </div>
 
@@ -29,17 +37,26 @@ export function Footer() {
                         </h4>
                         <ul className="space-y-3">
                             <li>
-                                <Link href="/projects" className="text-sm text-slate-600 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
+                                <Link
+                                    href="/projects"
+                                    className="text-sm text-slate-600 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
+                                >
                                     Projects
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/about" className="text-sm text-slate-600 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
+                                <Link
+                                    href="/about"
+                                    className="text-sm text-slate-600 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
+                                >
                                     About
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/contact" className="text-sm text-slate-600 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
+                                <Link
+                                    href="/contact"
+                                    className="text-sm text-slate-600 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
+                                >
                                     Contact
                                 </Link>
                             </li>
@@ -105,13 +122,12 @@ export function Footer() {
                         </ul>
                     </div>
                 </div>
-
-                {/* Divider and bottom info */}
-                <div className="border-t border-slate-200 dark:border-slate-800 pt-8">
-                    <p className="text-xs text-slate-500 dark:text-slate-500 text-center">
-                        © {year} Erick Garcia. Built with Next.js & TypeScript.
-                    </p>
-                </div>
+            </div>
+            {/* Divider and bottom info */}
+            <div className="border-t border-slate-200 dark:border-slate-800 py-6">
+                <p className="text-xs text-slate-500 dark:text-slate-500 text-center">
+                    © {year} Erick Garcia. Built with Next.js & TypeScript.
+                </p>
             </div>
         </footer>
     );
