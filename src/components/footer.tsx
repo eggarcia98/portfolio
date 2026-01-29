@@ -13,7 +13,7 @@ export function Footer() {
                         href="/"
                         className="inline-flex items-center gap-3 mb-6"
                     >
-                        <div className="h-10 w-10 rounded-full bg-teal-600 dark:bg-teal-500 flex items-center justify-center flex-shrink-0">
+                        <div className="h-10 w-10 rounded-full bg-teal-600 dark:bg-teal-500 flex items-center justify-center shrink-0">
                             <span className="text-white font-extrabold text-sm">
                                 EG
                             </span>
