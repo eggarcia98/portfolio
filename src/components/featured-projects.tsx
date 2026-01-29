@@ -32,7 +32,7 @@ export default function FeaturedProjects() {
                                     MySQL → PostgreSQL
                                 </p>
                             </div>
-                            <Database className="h-6 w-6 text-teal-600/30 dark:text-teal-400/30 flex-shrink-0" />
+                            <Database className="h-6 w-6 text-teal-600/30 dark:text-teal-400/30 shrink-0" />
                         </div>
                         <p className="text-sm font-light text-slate-600 dark:text-slate-300 leading-relaxed">
                             Automated a live production migration with validation gates and rollback planning to avoid downtime and protect data integrity.
@@ -64,7 +64,7 @@ export default function FeaturedProjects() {
                                         HL7 Proxy Service
                                     </h3>
                                 </div>
-                                <Cloud className="h-5 w-5 text-teal-600/30 dark:text-teal-400/30 flex-shrink-0" />
+                                <Cloud className="h-5 w-5 text-teal-600/30 dark:text-teal-400/30 shrink-0" />
                             </div>
                             <p className="text-sm font-light text-slate-600 dark:text-slate-300 leading-relaxed">
                                 Stateless service transforming HL7 data to JSON, designed for reliability and scale.
@@ -93,7 +93,7 @@ export default function FeaturedProjects() {
                                         Cloudflare Tunnel Setup
                                     </h3>
                                 </div>
-                                <Lock className="h-5 w-5 text-teal-600/30 dark:text-teal-400/30 flex-shrink-0" />
+                                <Lock className="h-5 w-5 text-teal-600/30 dark:text-teal-400/30 shrink-0" />
                             </div>
                             <p className="text-sm font-light text-slate-600 dark:text-slate-300 leading-relaxed">
                                 Publishing Next.js behind CGNAT with secure tunnel and DNS configuration.
