@@ -19,7 +19,7 @@ export default function FeaturedProjects() {
                     href="/projects/db-migration"
                     className="surface group relative overflow-hidden p-8 lg:col-span-7 transition-all hover:shadow-xl hover:-translate-y-1"
                 >
-                    <div className="absolute inset-0 -z-10 bg-gradient-to-br from-teal-50/0 via-teal-50/0 to-teal-50/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:from-teal-900/0 dark:via-teal-900/0 dark:to-teal-900/20"></div>
+                    <div className="absolute inset-0 -z-10 bg-linear-to-br from-teal-50/0 via-teal-50/0 to-teal-50/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:from-teal-900/0 dark:via-teal-900/0 dark:to-teal-900/20"></div>
                     <div className="flex items-start justify-between gap-4">
                         <div>
                             <p className="text-xs font-medium uppercase tracking-wider text-teal-600 dark:text-teal-400">
@@ -32,7 +32,11 @@ export default function FeaturedProjects() {
                                 MySQL → PostgreSQL
                             </p>
                         </div>
-                        <svg className="h-8 w-8 shrink-0 text-teal-600/20 transition-transform duration-300 group-hover:rotate-12 dark:text-teal-400/20" fill="currentColor" viewBox="0 0 24 24">
+                        <svg
+                            className="h-8 w-8 shrink-0 text-teal-600/20 transition-transform duration-300 group-hover:rotate-12 dark:text-teal-400/20"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                        >
                             <path d="M13 10V3L4 14h7v7l9-11h-7z" />
                         </svg>
                     </div>
@@ -56,7 +60,7 @@ export default function FeaturedProjects() {
                         href="/projects/hl7-proxy"
                         className="surface group relative overflow-hidden p-6 transition-all hover:shadow-lg hover:-translate-y-0.5"
                     >
-                        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-teal-50/0 to-teal-50/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:from-teal-900/0 dark:to-teal-900/20"></div>
+                        <div className="absolute inset-0 -z-10 bg-linear-to-br from-teal-50/0 to-teal-50/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:from-teal-900/0 dark:to-teal-900/20"></div>
                         <div className="flex items-start justify-between gap-2">
                             <div>
                                 <p className="text-xs font-medium text-slate-500 dark:text-slate-400">
@@ -66,8 +70,18 @@ export default function FeaturedProjects() {
                                     HL7 Proxy Service
                                 </h3>
                             </div>
-                            <svg className="h-6 w-6 shrink-0 text-teal-600/20 transition-transform duration-300 group-hover:translate-x-1 dark:text-teal-400/20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            <svg
+                                className="h-6 w-6 shrink-0 text-teal-600/20 transition-transform duration-300 group-hover:translate-x-1 dark:text-teal-400/20"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M9 5l7 7-7 7"
+                                />
                             </svg>
                         </div>
                         <p className="mt-3 text-base font-light leading-relaxed text-slate-600 dark:text-slate-300">
@@ -85,7 +99,7 @@ export default function FeaturedProjects() {
                         href="/projects/cloudflare-tunnel"
                         className="surface group relative overflow-hidden p-6 transition-all hover:shadow-lg hover:-translate-y-0.5"
                     >
-                        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-teal-50/0 to-teal-50/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:from-teal-900/0 dark:to-teal-900/20"></div>
+                        <div className="absolute inset-0 -z-10 bg-linear-to-br from-teal-50/0 to-teal-50/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:from-teal-900/0 dark:to-teal-900/20"></div>
                         <div className="flex items-start justify-between gap-2">
                             <div>
                                 <p className="text-xs font-medium text-slate-500 dark:text-slate-400">
@@ -95,8 +109,18 @@ export default function FeaturedProjects() {
                                     Cloudflare Tunnel Setup
                                 </h3>
                             </div>
-                            <svg className="h-6 w-6 shrink-0 text-teal-600/20 transition-transform duration-300 group-hover:translate-x-1 dark:text-teal-400/20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            <svg
+                                className="h-6 w-6 shrink-0 text-teal-600/20 transition-transform duration-300 group-hover:translate-x-1 dark:text-teal-400/20"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M9 5l7 7-7 7"
+                                />
                             </svg>
                         </div>
                         <p className="mt-3 text-base font-light leading-relaxed text-slate-600 dark:text-slate-300">
