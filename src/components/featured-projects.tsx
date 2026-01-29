@@ -14,7 +14,7 @@ export default function FeaturedProjects() {
                     </p>
                 </div>
 
-                <div className="grid gap-4 lg:grid-cols-12 my-12">
+                <div className="grid gap-4 lg:grid-cols-12 my-6">
                     {/* Big featured card */}
                     <Link
                         href="/projects/db-migration"
@@ -111,7 +111,7 @@ export default function FeaturedProjects() {
                     </div>
                 </div>
 
-                <div className="text-center mt-12">
+                <div className="text-center mt-6 mb-6">
                     <Link
                         href="/projects"
                         className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-xs font-medium text-white transition-all hover:bg-teal-700"
