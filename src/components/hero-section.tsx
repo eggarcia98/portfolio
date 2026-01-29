@@ -41,7 +41,7 @@ const experienceStats = [
 
 export default function HeroSection() {
     return (
-        <section className="relative pt-12 pb-12 lg:pt-24 lg:pb-12 bg-linear-to-b from-slate-50/50 to-transparent dark:from-slate-900/30 dark:to-transparent">
+        <section className="relative pt-12 pb-12 lg:pt-14 lg:pb-14 bg-linear-to-b from-slate-50/50 to-transparent dark:from-slate-900/30 dark:to-transparent">
             {/* Background decoration */}
             <div className="absolute inset-0 -z-10 overflow-hidden">
                 <div className="absolute left-[50%] top-0 h-125 w-125 -translate-x-1/2 rounded-full bg-teal-500/5 blur-3xl"></div>

@@ -3,7 +3,7 @@ import { ArrowRight, Database, Cloud, Lock } from "lucide-react";
 
 export default function FeaturedProjects() {
     return (
-        <section className="relative lg:py-12">
+        <section className="relative ">
             <div className="mx-auto max-w-6xl">
                 <div>
                     <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white lg:text-4xl">
