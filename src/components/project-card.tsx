@@ -37,7 +37,7 @@ export function ProjectCard({
             </p>
 
             {impact ? (
-                <div className="mt-5 rounded-lg border border-teal-200/60 bg-gradient-to-br from-teal-50/80 to-teal-100/40 p-4 shadow-sm dark:border-teal-900/30 dark:from-teal-900/20 dark:to-teal-900/10">
+                <div className="mt-5 rounded-lg border border-teal-200/60 bg-linear-to-br from-teal-50/80 to-teal-100/40 p-4 shadow-sm dark:border-teal-900/30 dark:from-teal-900/20 dark:to-teal-900/10">
                     <p className="text-sm font-light text-slate-700 dark:text-slate-200">
                         <span className="font-semibold text-teal-700 dark:text-teal-400">Impact:</span>{" "}
                         {impact}

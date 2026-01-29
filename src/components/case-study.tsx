@@ -39,7 +39,7 @@ export function CaseStudy({ title, subtitle, stack, children }: Props) {
             </header>
 
             <main className="container-page py-16 lg:py-20">
-                <article className="article max-w-3xl">{children}</article>
+                <article className="article max-w-3xl">{children}</article> 
             </main>
         </div>
     );
