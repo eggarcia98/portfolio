@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Code, Database, Cloud, Wrench, Download } from "lucide-react";
+import Image from "next/image";
+import { Code, Database, Cloud, Wrench, Download, Palette } from "lucide-react";
 
 const techStacks = [
     {
@@ -21,6 +22,11 @@ const techStacks = [
         name: "Tools",
         icon: Wrench,
         technologies: ["Git", "REST APIs", "Linux"],
+    },
+    {
+        name: "Frontend",
+        icon: Palette,
+        technologies: ["TailwindCSS", "Component-Based UI", "Responsive UI"],
     },
 ];
 
@@ -68,12 +74,21 @@ export default function HeroSection() {
                                 </span>
                             </div>
                         </div>
-                        <p className="text-sm lg:text-base font-light text-slate-600 dark:text-slate-300 leading-relaxed mb-8 flex-1">
+                        <p className="text-sm lg:text-base font-light text-slate-600 dark:text-slate-300 leading-relaxed mb-8">
                             Crafting production-grade systems with TypeScript,
                             Python, and modern cloud infrastructure. I
                             specialize in database optimization, scalable APIs,
                             and building systems that prioritize reliability.
                         </p>
+                        <div className="mb-6 w-full max-w-sm mx-auto">
+                            <Image
+                                src="/arch.png"
+                                alt="Architecture Diagram"
+                                width={300}
+                                height={300}
+                                className="w-full h-auto"
+                            />
+                        </div>
                         <div className="flex gap-3">
                             <Link
                                 href="/projects"
