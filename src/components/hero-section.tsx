@@ -68,7 +68,7 @@ export default function HeroSection() {
                                 </span>
                             </div>
                         </div>
-                        <p className="text-sm font-light text-slate-600 dark:text-slate-300 leading-relaxed mb-8 flex-1">
+                        <p className="text-sm lg:text-base font-light text-slate-600 dark:text-slate-300 leading-relaxed mb-8 flex-1">
                             Crafting production-grade systems with TypeScript,
                             Python, and modern cloud infrastructure. I
                             specialize in database optimization, scalable APIs,
