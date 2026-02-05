@@ -47,20 +47,24 @@ export default function OdooMiddlewareCaseStudy() {
             </p>
 
             <h2>Architecture</h2>
-            <pre>
-                {`Upstream systems
-   |
-   | Scheduled fetch (cron)
-   v
-Middleware service (TypeScript)
-   |
-   | Validation + transformation
-   v
-Odoo ERP (REST API)
-   |
-   v
-Accounting / reporting`}
-            </pre>
+            <div className="my-5 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 overflow-hidden relative">
+                <img
+                    src="/diagrams/odoo_sync.svg"
+                    alt="Odoo Middleware Architecture Diagram"
+                    className="w-full"
+                />
+                <a
+                    href="/diagrams/odoo_sync.svg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute top-2 right-2 p-1 rounded bg-white/60 dark:bg-slate-800/60 text-teal-600 dark:text-teal-400 hover:bg-white/80 dark:hover:bg-slate-800/80 transition-colors"
+                    title="Open fullscreen"
+                >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </a>
+            </div>
 
             <h2>Key decisions</h2>
             <ul>
