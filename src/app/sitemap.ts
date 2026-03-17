@@ -7,6 +7,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const routes = [
         "",
         "/projects",
+        "/projects/professional",
+        "/projects/personal",
         "/about",
         "/contact",
         "/projects/cloudflare-tunnel",

@@ -1,65 +1,31 @@
-import { Navbar } from "@/components/navbar";
-import { ProjectCard } from "@/components/project-card";
 import { Footer } from "@/components/footer";
+import { Navbar } from "@/components/navbar";
+import { personalProjects, professionalProjects } from "@/lib/projects";
 import Link from "next/link";
 
-const projects = [
-    {
-        title: "HL7 Data Proxy & Cloud Run Integration",
-        summary:
-            "Stateless TypeScript service that transforms HL7 analyzer output into JSON for ingestion, deployed as a Docker container on Cloud Run.",
-        impact: "~50% faster onboarding",
-        tags: [
-            "TypeScript",
-            "Fastify",
-            "Docker",
-            "GCP Cloud Run",
-            "PostgreSQL",
-            "HL7",
-        ],
-        href: "/projects/hl7-proxy",
-    },
-    {
-        title: "Publishing a Next.js App Behind CGNAT (Cloudflare Tunnel)",
-        summary:
-            "Exposed a local Next.js app securely without port forwarding, using Cloudflare Tunnel + DNS for public HTTPS access.",
-        impact: "Public HTTPS without public IP",
-        tags: [
-            "Cloudflare",
-            "Tunnels",
-            "Next.js",
-            "DNS",
-            "Networking",
-            "Security",
-        ],
-        href: "/projects/cloudflare-tunnel",
-    },
-    {
-        title: "Live Database Migration: MySQL → PostgreSQL",
-        summary:
-            "Automated a live production migration with validation gates and rollback planning to minimize risk and avoid downtime.",
-        impact: "Live cutover with integrity checks",
-        tags: ["Python", "SQL", "Bash", "MySQL", "PostgreSQL", "Reliability"],
-        href: "/projects/db-migration",
-    },
-    {
-        title: "Odoo ERP Middleware — Scheduled Synchronization",
-        summary:
-            "Built scheduled sync jobs that improved ERP data consistency and reduced manual accounting work via defensive validation and idempotent operations.",
-        impact: "~40% fewer sync errors",
-        tags: [
-            "TypeScript",
-            "REST APIs",
-            "Linux",
-            "Cron",
-            "Automation",
-            "Integration",
-        ],
-        href: "/projects/odoo-middleware",
-    },
-];
-
 export default function ProjectsPage() {
+    const modules = [
+        {
+            title: "Professional Projects",
+            summary:
+                "Production case studies focused on architecture, reliability, and measurable business impact.",
+            href: "/projects/professional",
+            badge: "Module 01",
+            countLabel: `${professionalProjects.length} case studies`,
+        },
+        {
+            title: "Personal Projects",
+            summary:
+                "Independent builds and experiments where I explore ideas, tooling, and implementation patterns.",
+            href: "/projects/personal",
+            badge: "Module 02",
+            countLabel:
+                personalProjects.length > 0
+                    ? `${personalProjects.length} projects`
+                    : "Coming soon",
+        },
+    ];
+
     return (
         <div className="min-h-dvh">
             <Navbar />
@@ -69,17 +35,39 @@ export default function ProjectsPage() {
                     <p className="text-sm font-semibold uppercase tracking-wider text-teal-600 dark:text-teal-400">
                         Portfolio
                     </p>
-                    <h1 className="h2 mt-4">Technical Projects</h1>
+                    <h1 className="h2 mt-4">Project Modules</h1>
                     <p className="lead mt-6">
-                        Case studies focused on outcomes and architecture decisions. Source code remains private due to professional constraints.
+                        Browse projects by context: professional case studies and personal builds.
                     </p>
                 </div>
 
-                <div className="mt-12 grid gap-6 lg:grid-cols-2">
-                    {projects.map((p) => (
-                        <ProjectCard key={p.href} {...p} />
+                <section className="mt-12 grid gap-6 lg:grid-cols-2">
+                    {modules.map((module) => (
+                        <Link
+                            key={module.href}
+                            href={module.href}
+                            className="surface group block p-8 transition-all hover:-translate-y-1 hover:shadow-xl"
+                        >
+                            <p className="text-xs font-semibold uppercase tracking-wider text-teal-600 dark:text-teal-400">
+                                {module.badge}
+                            </p>
+                            <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 transition-colors group-hover:text-teal-600 dark:text-white dark:group-hover:text-teal-400 lg:text-3xl">
+                                {module.title}
+                            </h2>
+                            <p className="mt-4 text-sm font-light leading-relaxed text-slate-600 dark:text-slate-300">
+                                {module.summary}
+                            </p>
+                            <div className="mt-6 flex items-center justify-between border-t border-slate-200/60 pt-4 dark:border-slate-800/60">
+                                <span className="text-xs font-medium uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                                    {module.countLabel}
+                                </span>
+                                <span className="text-sm font-medium text-teal-700 dark:text-teal-300">
+                                    Open module
+                                </span>
+                            </div>
+                        </Link>
                     ))}
-                </div>
+                </section>
 
                 <section className="mt-20 surface p-8 lg:p-10">
                     <p className="text-xs font-semibold uppercase tracking-wider text-teal-600 dark:text-teal-400">
@@ -98,6 +86,7 @@ export default function ProjectsPage() {
                     </div>
                 </section>
             </main>
+
             <Footer />
         </div>
     );
