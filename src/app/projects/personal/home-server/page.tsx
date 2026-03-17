@@ -8,6 +8,7 @@ type Service = {
         src: string;
         alt: string;
     }[];
+    ciCdSteps?: string[];
     github?: string;
 };
 
@@ -19,15 +20,15 @@ const services: Service[] = [
         screenshots: [
             {
                 src: "/diagrams/portainer/capture1.png",
-                alt: "Portainer dashboard",
+                alt: "Portainer",
             },
             {
                 src: "/diagrams/portainer/capture2.png",
-                alt: "Portainer dashboard",
+                alt: "Portainer",
             },
             {
                 src: "/diagrams/portainer/capture3.png",
-                alt: "Portainer dashboard",
+                alt: "Portainer",
             },
         ],
     },
@@ -37,16 +38,30 @@ const services: Service[] = [
             "Self-hosted file storage, sync, and sharing with real-time document collaboration. Nextcloud provides file management while Collabora (LibreOffice-based) enables concurrent editing.",
         screenshots: [
             {
-                src: "/diagrams/homeserver-nextcloud.png",
-                alt: "Nextcloud and Collabora workspace",
+                src: "/diagrams/nextcloud/capture1.png",
+                alt: "Nextcloud",
+            },
+            {
+                src: "/diagrams/nextcloud/capture2.png",
+                alt: "Nextcloud",
+            },
+            {
+                src: "/diagrams/nextcloud/capture3.png",
+                alt: "Nextcloud",
             },
         ],
     },
     {
         name: "Auth Service",
         description:
-            "Custom authentication gateway built with Fastify and Supabase PostgreSQL. Provides centralized identity and authorization for all home server applications.",
-        github: "https://github.com/eggarcia9814/home-server-auth",
+            "One secure login service for the entire home server stack, powered by Fastify and Supabase PostgreSQL. It centralizes authentication and authorization across apps with a reliable, automated release workflow.",
+        ciCdSteps: [
+            "Push changes to the stage branch.",
+            "GitHub Actions runs the test suite and quality checks.",
+            "Merge approved changes into the master branch.",
+            "On master updates, GitHub Actions pulls the latest code on the local server and rebuilds the Docker container image.",
+        ],
+        github: "https://github.com/eggarcia98/auth-backend",
     },
 ];
 
@@ -106,6 +121,27 @@ export default function HomeServerPage() {
                             <p className="mb-0! mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
                                 {service.description}
                             </p>
+
+                            {service.ciCdSteps && service.ciCdSteps.length > 0 ? (
+                                <div className="mt-4 rounded-md border border-slate-200 bg-slate-50/80 p-4 dark:border-slate-700 dark:bg-slate-800/40">
+                                    <p className="m-0 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+                                        CI/CD Flow
+                                    </p>
+                                    <ol className="mb-0 mt-3 list-none space-y-2 p-0 text-sm text-slate-700 dark:text-slate-200">
+                                        {service.ciCdSteps.map((step, index) => (
+                                            <li
+                                                key={`${service.name}-cicd-${index}`}
+                                                className="flex items-start gap-2"
+                                            >
+                                                <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-teal-100 text-xs font-semibold text-teal-700 dark:bg-teal-900/40 dark:text-teal-300">
+                                                    {index + 1}
+                                                </span>
+                                                <span>{step}</span>
+                                            </li>
+                                        ))}
+                                    </ol>
+                                </div>
+                            ) : null}
 
                             {/* Links */}
                             {service.github && (

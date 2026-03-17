@@ -17,7 +17,7 @@ export default function FeaturedProjects() {
                 <div className="grid gap-4 lg:grid-cols-12 my-6">
                     {/* Big featured card */}
                     <Link
-                        href="/projects/db-migration"
+                        href="/projects/hl7-proxy"
                         className="surface group relative overflow-hidden p-8 lg:col-span-7 transition-all hover:shadow-sm"
                     >
                         <div className="flex items-start justify-between gap-4 mb-6">
@@ -26,22 +26,22 @@ export default function FeaturedProjects() {
                                     Featured Project
                                 </p>
                                 <h3 className="text-2xl font-extrabold text-slate-900 dark:text-white lg:text-3xl">
-                                    Live Database Migration
+                                    HL7 Data Proxy & Cloud Run Integration
                                 </h3>
                                 <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                                    MySQL → PostgreSQL
+                                    Healthcare Data Integration
                                 </p>
                             </div>
-                            <Database className="h-6 w-6 text-teal-600/30 dark:text-teal-400/30 shrink-0" />
+                            <Cloud className="h-6 w-6 text-teal-600/30 dark:text-teal-400/30 shrink-0" />
                         </div>
                         <p className="text-sm font-light text-slate-600 dark:text-slate-300 leading-relaxed">
-                            Automated a live production migration with validation gates and rollback planning to avoid downtime and protect data integrity.
+                            Stateless TypeScript service that transforms HL7 analyzer output into JSON for ingestion, deployed in Docker on Cloud Run for reliable scaling.
                         </p>
                         <div className="mt-6 flex flex-wrap gap-2">
-                            <span className="chip text-xs">Python</span>
-                            <span className="chip text-xs">MySQL</span>
-                            <span className="chip text-xs">PostgreSQL</span>
-                            <span className="chip text-xs">Reliability</span>
+                            <span className="chip text-xs">TypeScript</span>
+                            <span className="chip text-xs">Fastify</span>
+                            <span className="chip text-xs">Cloud Run</span>
+                            <span className="chip text-xs">HL7</span>
                         </div>
                         <div className="mt-6 flex items-center gap-2 text-teal-600 dark:text-teal-400 text-xs font-medium group-hover:gap-3 transition-all">
                             View case study
@@ -52,27 +52,27 @@ export default function FeaturedProjects() {
                     {/* Two smaller cards */}
                     <div className="grid gap-4 lg:col-span-5">
                         <Link
-                            href="/projects/hl7-proxy"
+                            href="/projects/personal/home-server"
                             className="surface group relative overflow-hidden p-6 transition-all hover:shadow-sm"
                         >
                             <div className="flex items-start justify-between gap-3 mb-4">
                                 <div className="flex-1">
                                     <p className="text-xs font-medium text-slate-500 dark:text-slate-400">
-                                        Cloud Run · Healthcare
+                                        Self-Hosted · Infrastructure
                                     </p>
                                     <h3 className="mt-2 text-lg font-bold text-slate-900 dark:text-white">
-                                        HL7 Proxy Service
+                                        Home Server Infrastructure
                                     </h3>
                                 </div>
-                                <Cloud className="h-5 w-5 text-teal-600/30 dark:text-teal-400/30 shrink-0" />
+                                <Database className="h-5 w-5 text-teal-600/30 dark:text-teal-400/30 shrink-0" />
                             </div>
                             <p className="text-sm font-light text-slate-600 dark:text-slate-300 leading-relaxed">
-                                Stateless service transforming HL7 data to JSON, designed for reliability and scale.
+                                Unified home platform with Docker, Portainer, Nextcloud, Collabora, and centralized authentication exposed securely via Cloudflare Tunnel.
                             </p>
                             <div className="mt-4 flex flex-wrap gap-2">
                                 <span className="chip text-xs">Docker</span>
-                                <span className="chip text-xs">GCP</span>
-                                <span className="chip text-xs">TypeScript</span>
+                                <span className="chip text-xs">Portainer</span>
+                                <span className="chip text-xs">Nextcloud</span>
                             </div>
                             <div className="mt-4 flex items-center gap-2 text-teal-600 dark:text-teal-400 text-xs font-medium">
                                 View case study
@@ -81,27 +81,27 @@ export default function FeaturedProjects() {
                         </Link>
 
                         <Link
-                            href="/projects/cloudflare-tunnel"
+                            href="/projects/personal/los-guayacos"
                             className="surface group relative overflow-hidden p-6 transition-all hover:shadow-sm"
                         >
                             <div className="flex items-start justify-between gap-3 mb-4">
                                 <div className="flex-1">
                                     <p className="text-xs font-medium text-slate-500 dark:text-slate-400">
-                                        Networking · Infrastructure
+                                        Business · Web Platform
                                     </p>
                                     <h3 className="mt-2 text-lg font-bold text-slate-900 dark:text-white">
-                                        Cloudflare Tunnel Setup
+                                        Los Guayacos Restaurant
                                     </h3>
                                 </div>
                                 <Lock className="h-5 w-5 text-teal-600/30 dark:text-teal-400/30 shrink-0" />
                             </div>
                             <p className="text-sm font-light text-slate-600 dark:text-slate-300 leading-relaxed">
-                                Publishing Next.js behind CGNAT with secure tunnel and DNS configuration.
+                                Restaurant web presence built with Next.js on Cloudflare Pages, integrated with home-server authentication powered by Supabase.
                             </p>
                             <div className="mt-4 flex flex-wrap gap-2">
-                                <span className="chip text-xs">Cloudflare</span>
-                                <span className="chip text-xs">DNS</span>
-                                <span className="chip text-xs">Security</span>
+                                <span className="chip text-xs">Next.js</span>
+                                <span className="chip text-xs">Cloudflare Pages</span>
+                                <span className="chip text-xs">Supabase</span>
                             </div>
                             <div className="mt-4 flex items-center gap-2 text-teal-600 dark:text-teal-400 text-xs font-medium">
                                 View case study
