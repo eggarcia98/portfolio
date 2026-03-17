@@ -5,6 +5,7 @@ export default function CloudflareTunnelCaseStudy() {
         <CaseStudy
             title="Publishing a Next.js App Behind CGNAT with Cloudflare Tunnel"
             subtitle="A practical deployment that exposes a local Next.js app securely without port forwarding, even when the ISP uses CGNAT."
+            backHref="/projects/professional"
             stack={[
                 "Next.js",
                 "Cloudflare Tunnel",

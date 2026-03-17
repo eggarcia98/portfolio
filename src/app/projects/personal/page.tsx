@@ -28,7 +28,7 @@ export default function PersonalProjectsPage() {
                 </div>
 
                 {personalProjects.length > 0 ? (
-                    <div className="mt-12 space-y-4">
+                    <div className="mt-12 grid gap-6 lg:grid-cols-2">
                         {personalProjects.map((project) => (
                             <PersonalProjectCard
                                 key={project.href}

@@ -5,6 +5,7 @@ export default function DbMigrationCaseStudy() {
         <CaseStudy
             title="Live Database Migration: MySQL → PostgreSQL"
             subtitle="A live, in-production database migration from MySQL to PostgreSQL using automated scripts, validation gates, and rollback planning to avoid business downtime."
+            backHref="/projects/professional"
             stack={[
                 "Python",
                 "SQL",

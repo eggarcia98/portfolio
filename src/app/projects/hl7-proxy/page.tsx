@@ -5,6 +5,7 @@ export default function Hl7ProxyCaseStudy() {
         <CaseStudy
             title="HL7 Data Proxy & Cloud Run Integration"
             subtitle="A stateless TypeScript service that transforms HL7 analyzer output into JSON and exposes it for ingestion—deployed as a Docker container on Google Cloud Run."
+            backHref="/projects/professional"
             stack={[
                 "TypeScript",
                 "Fastify",

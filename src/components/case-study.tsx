@@ -5,15 +5,16 @@ type Props = {
     subtitle: string;
     stack: string[];
     children: React.ReactNode;
+    backHref?: string;
 };
 
-export function CaseStudy({ title, subtitle, stack, children }: Props) {
+export function CaseStudy({ title, subtitle, stack, children, backHref = "/projects" }: Props) {
     return (
         <div className="min-h-dvh">
             <header className="border-b border-slate-200 bg-white/80 backdrop-blur shadow-sm dark:border-slate-800 dark:bg-slate-900/40 sticky top-0 z-30">
                 <div className="container-page py-3 sm:py-4">
                     <Link
-                        href="/projects"
+                        href={backHref}
                         className="navlink inline-flex items-center gap-1 text-teal-700 dark:text-teal-300 hover:text-teal-900 dark:hover:text-teal-200 transition-colors"
                     >
                         <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
