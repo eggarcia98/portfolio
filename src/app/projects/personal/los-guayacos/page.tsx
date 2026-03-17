@@ -14,20 +14,20 @@ export default function LosGuayacosPage() {
                 Los Guayacos is a restaurant business web presence built with modern web standards. The application showcases the restaurant brand, integrates online ordering or reservation capabilities, and leverages centralized authentication via the home server infrastructure.
             </p>
 
-            <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_16rem]">
-                <figure className="flex h-96 items-center justify-center overflow-hidden rounded-lg bg-white dark:bg-slate-900/40">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-[minmax(0,1fr)_10rem] sm:gap-4 lg:grid-cols-[minmax(0,1fr)_16rem]">
+                <figure className="overflow-hidden rounded-lg bg-white dark:bg-slate-900/40 sm:flex sm:h-72 sm:items-center sm:justify-center lg:h-96">
                     <img
                         src="/diagrams/los-guayacos/web.png"
                         alt="Los Guayacos web version"
-                        className="block h-full w-full object-contain"
+                        className="block h-auto w-full sm:h-full sm:w-full sm:object-contain"
                     />
                 </figure>
 
-                <figure className="flex h-96 items-center justify-center overflow-hidden rounded-lg bg-white dark:bg-slate-900/40">
+                <figure className="overflow-hidden rounded-lg bg-white dark:bg-slate-900/40 sm:flex sm:h-72 sm:items-center sm:justify-center lg:h-96">
                     <img
                         src="/diagrams/los-guayacos/mobile.png"
                         alt="Los Guayacos mobile version"
-                        className="block h-full w-full object-contain"
+                        className="mx-auto block h-auto w-full max-w-sm sm:h-full sm:w-full sm:max-w-none sm:object-contain"
                     />
                 </figure>
             </div>
