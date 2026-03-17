@@ -15,6 +15,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         "/projects/hl7-proxy",
         "/projects/odoo-middleware",
         "/projects/db-migration",
+        "/projects/personal/home-server",
+        "/projects/personal/los-guayacos",
     ];
 
     return routes.map((path) => ({

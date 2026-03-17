@@ -62,4 +62,35 @@ export const professionalProjects: Project[] = [
     },
 ];
 
-export const personalProjects: Project[] = [];
+export const personalProjects: Project[] = [
+    {
+        title: "Home Server Infrastructure",
+        summary:
+            "Self-hosted unified platform running Portainer for container orchestration, Nextcloud for file storage/sync, Collabora for real-time document collaboration, and custom authentication service with Supabase. All services exposed securely via Cloudflare Tunnel.",
+        tags: [
+            "Docker",
+            "Portainer",
+            "Nextcloud",
+            "Collabora",
+            "Supabase",
+            "Cloudflare Tunnel",
+            "Authentication",
+            "Self-hosted",
+        ],
+        href: "/projects/personal/home-server",
+    },
+    {
+        title: "Los Guayacos — Restaurant Business",
+        summary:
+            "Restaurant web presence built with Next.js and deployed on Cloudflare Pages. Integrates with custom authentication service (powered by Supabase) running on the home server infrastructure for seamless account management.",
+        tags: [
+            "Next.js",
+            "Cloudflare Pages",
+            "Supabase",
+            "Authentication",
+            "TypeScript",
+            "Business",
+        ],
+        href: "/projects/personal/los-guayacos",
+    },
+];

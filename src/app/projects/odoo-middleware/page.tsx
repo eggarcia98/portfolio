@@ -5,6 +5,7 @@ export default function OdooMiddlewareCaseStudy() {
         <CaseStudy
             title="Odoo ERP Middleware — Scheduled Synchronization"
             subtitle="A scheduled middleware service that synchronized sales and operational data with Odoo ERP, improving data consistency and reducing manual accounting work."
+            backHref="/projects/professional"
             stack={[
                 "TypeScript",
                 "REST APIs",

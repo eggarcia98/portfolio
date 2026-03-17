@@ -32,23 +32,6 @@ export default function ProfessionalProjectsPage() {
                         <ProjectCard key={project.href} {...project} />
                     ))}
                 </div>
-
-                <section className="mt-20 surface p-8 lg:p-10">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-teal-600 dark:text-teal-400">
-                        Open to Opportunities
-                    </p>
-                    <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 dark:text-white lg:text-3xl">
-                        Looking for my next role
-                    </h2>
-                    <p className="lead mt-4 max-w-2xl">
-                        Backend engineering, Cloud/DevOps, or Technical Support roles that combine development and infrastructure work.
-                    </p>
-                    <div className="mt-6">
-                        <Link href="/contact" className="btn btn-primary">
-                            Get in Touch
-                        </Link>
-                    </div>
-                </section>
             </main>
 
             <Footer />
