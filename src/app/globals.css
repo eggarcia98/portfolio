@@ -37,6 +37,29 @@
 
 /* ---------- Component classes ---------- */
 @layer components {
+    .scroll-reveal {
+        opacity: 0;
+        transform: translateY(14px);
+        transition:
+            opacity 700ms cubic-bezier(0.16, 1, 0.3, 1),
+            transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+        transition-delay: var(--reveal-delay, 0ms);
+        will-change: opacity, transform, filter;
+    }
+
+    .scroll-reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .scroll-reveal {
+            opacity: 1;
+            transform: none;
+            transition: none;
+        }
+    }
+
     .section {
         @apply mt-20 lg:mt-28;
     }
