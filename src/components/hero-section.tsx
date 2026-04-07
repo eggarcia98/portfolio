@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Code, Database, Cloud, Wrench, Download, Palette } from "lucide-react";
+import { ScrollReveal } from "@/components/scroll-reveal";
 
 const techStacks = [
     {
@@ -57,7 +58,7 @@ export default function HeroSection() {
                 {/* Top Section - Profile + Top Tech Cards */}
                 <div className="grid gap-4 lg:grid-cols-[65%_auto] lg:grid-rows-4 mb-4 ">
                     {/* Left Column - Profile Box */}
-                    <div className="surface p-8 flex flex-col row-span-3">
+                    <ScrollReveal className="surface p-8 flex flex-col row-span-3" delay={0}>
                         <div className="flex items-start justify-between gap-4 mb-6">
                             <div>
                                 <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white">
@@ -103,14 +104,15 @@ export default function HeroSection() {
                                 Get in Touch
                             </Link>
                         </div>
-                    </div>
+                    </ScrollReveal>
 
                     {/* Tech Cards Stacked */}
-                    <div className="flex flex-col gap-4 row-span-4 h-full ">
-                        {techStacks.map((stack) => (
-                            <div
+                    <div className="flex flex-col gap-4 row-span-4">
+                        {techStacks.map((stack, index) => (
+                            <ScrollReveal
                                 key={stack.name}
-                                className="surface p-6 w-full h-full"
+                                className="surface p-6 w-full"
+                                delay={80 + index * 90}
                             >
                                 <div className="flex items-center gap-3 mb-4">
                                     <stack.icon className="h-5 w-5 dark:text-teal-400" />
@@ -129,12 +131,12 @@ export default function HeroSection() {
                                         </span>
                                     ))}
                                 </div>
-                            </div>
+                            </ScrollReveal>
                         ))}
                     </div>
 
                     {/* Experience Stats */}
-                    <div className="surface p-6 ">
+                    <ScrollReveal className="surface p-6" delay={420}>
                         <h3 className="text-xs font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-4">
                             Experience
                         </h3>
@@ -150,25 +152,27 @@ export default function HeroSection() {
                                 </div>
                             ))}
                         </div>
-                    </div>
+                    </ScrollReveal>
                 </div>
 
                 {/* Download Resume Card */}
-                <a
-                    href="/Erick_Garcia_Resume.pdf"
-                    download
-                    className="surface p-2 group flex items-center justify-center gap-4 rounded-lg bg-teal-600 text-white font-medium text-xs transition-all hover:bg-teal-700 dark:bg-teal-600 dark:hover:bg-teal-700 mb-4"
-                >
-                    <Download className="h-5 w-5 shrink-0" />
-                    <div className="flex">
-                        <p className="text-xs font-semibold ">
-                            Download Resume
-                        </p>
-                        <div className="text-xs text-slate-300">
-                            &nbsp;-&nbsp;PDF • 2MB
+                <ScrollReveal delay={520}>
+                    <a
+                        href="/Erick_Garcia_Resume.pdf"
+                        download
+                        className="surface p-2 group flex items-center justify-center gap-4 rounded-lg bg-teal-600 text-white font-medium text-xs transition-all hover:bg-teal-700 dark:bg-teal-600 dark:hover:bg-teal-700 mb-4"
+                    >
+                        <Download className="h-5 w-5 shrink-0" />
+                        <div className="flex">
+                            <p className="text-xs font-semibold ">
+                                Download Resume
+                            </p>
+                            <div className="text-xs text-slate-300">
+                                &nbsp;-&nbsp;PDF • 2MB
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </ScrollReveal>
             </div>
         </section>
     );

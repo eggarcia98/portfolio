@@ -55,6 +55,7 @@ export function Navbar() {
 
                     {/* Desktop Navigation */}
                     <nav className="hidden items-center gap-1 lg:flex">
+                        <NavLink href="/">Home</NavLink>
                         <NavLink href="/projects">Projects</NavLink>
                         <NavLink href="/about">About</NavLink>
                         <NavLink href="/contact">Contact</NavLink>
@@ -142,6 +143,9 @@ export function Navbar() {
                             {/* Panel Content */}
                             <div className="flex-1 bg-white px-6 py-6 dark:bg-slate-900">
                                 <nav className="flex flex-col space-y-2">
+                                    <NavLink href="/" onClick={closeMobileMenu}>
+                                        Home
+                                    </NavLink>
                                     <NavLink href="/projects" onClick={closeMobileMenu}>
                                         Projects
                                     </NavLink>
