@@ -1,5 +1,6 @@
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
+import { PageHeader } from "@/components/ui/page-header";
 import { personalProjects, professionalProjects } from "@/lib/projects";
 import Link from "next/link";
 
@@ -31,15 +32,11 @@ export default function ProjectsPage() {
             <Navbar />
 
             <main className="container-page py-16 lg:py-24">
-                <div className="max-w-4xl">
-                    <p className="text-sm font-semibold uppercase tracking-wider text-teal-600 dark:text-teal-400">
-                        Portfolio
-                    </p>
-                    <h1 className="h2 mt-4">Project Modules</h1>
-                    <p className="lead mt-6">
-                        Browse projects by context: professional case studies and personal builds.
-                    </p>
-                </div>
+                <PageHeader
+                    eyebrow="Portfolio"
+                    title="Project Modules"
+                    description="Browse projects by context: professional case studies and personal builds."
+                />
 
                 <section className="mt-12 grid gap-6 lg:grid-cols-2">
                     {modules.map((module) => (

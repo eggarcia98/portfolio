@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { PageHeader } from "@/components/ui/page-header";
 import Link from "next/link";
 
 import type { Metadata } from "next";
@@ -20,14 +21,10 @@ export default function AboutPage() {
         <div className="min-h-dvh bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50">
             <Navbar />
             <main className="container-page py-16 lg:py-24">
-                <div className="max-w-4xl">
-                    <p className="text-sm font-semibold uppercase tracking-wider text-teal-600 dark:text-teal-400">
-                        About Me
-                    </p>
-                    <h1 className="h2 mt-4">
-                        Backend engineer building reliable systems
-                    </h1>
-                </div>
+                <PageHeader
+                    eyebrow="About Me"
+                    title="Backend engineer building reliable systems"
+                />
 
                 <div className="mt-12 grid gap-12 lg:grid-cols-3 lg:gap-16">
                     <section className="lg:col-span-2">
