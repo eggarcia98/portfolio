@@ -3,9 +3,11 @@ import { Navbar } from "@/components/navbar";
 import { BackLink } from "@/components/ui/back-link";
 import { PageHeader } from "@/components/ui/page-header";
 import { ProjectCard } from "@/components/ui/project-card";
-import { professionalProjects } from "@/lib/projects";
+import { getProfessionalProjects } from "@/lib/projects";
 
-export default function ProfessionalProjectsPage() {
+export default async function ProfessionalProjectsPage() {
+    const professionalProjects = await getProfessionalProjects();
+
     return (
         <div className="min-h-dvh">
             <Navbar />

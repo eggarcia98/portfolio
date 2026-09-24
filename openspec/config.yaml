@@ -1,0 +1,35 @@
+version: 1
+project: portfolio
+project_root: /home/orca/repositories/personal_repositories/portfolio
+work_id: FEAT-001
+sdd_change_name: database-schema
+artifact_store: hybrid
+pace: interactive
+delivery_strategy: ask-on-risk
+review_policy:
+  changed_lines_threshold: 400
+profile: balanced
+strict_tdd: false
+testing:
+  runner: none
+  command: null
+  coverage: false
+  layers: []
+  linter: eslint
+  type_checker: typescript
+  formatter: prettier
+stack:
+  - name: portfolio
+    path: .
+    type: nextjs
+    language: typescript
+    framework: next.js 16.1.2
+    package_manager: pnpm
+    test_runner: none
+    test_command: null
+    linter: eslint
+    type_checker: tsc
+    formatter: prettier
+skill_registry: .atl/skill-registry.md
+initialized_at: "2026-09-23T11:20:00Z"
+initialized_by: gentle-orchestrator

@@ -1,0 +1,60 @@
+version: 1
+work:
+  id: "FEAT-001"
+  project: "portfolio"
+state:
+  current: "implementing"
+  previous: "ready_for_implementation"
+  resume_state: "ready_for_implementation"
+  changed_at: "2026-09-23T11:17:00Z"
+  reason: "Task worktree resumed, handoff validated, environment verified"
+  evidence:
+    - type: "handoff"
+      reference: "docs/60-work/FEAT-001/handoff.yaml"
+      description: "Handoff artifact validated in worktree"
+    - type: "bootstrap"
+      reference: "docs/60-work/FEAT-001/bootstrap-result.yaml"
+      description: "Bootstrap result with validated context and complexity"
+    - type: "resume"
+      reference: "Task worktree resumed at 2026-09-23T11:17:00Z"
+      description: "Worktree initialization complete, ready for SDD apply phase"
+history:
+  - from: "intake"
+    to: "planned"
+    changed_at: "2026-09-22T09:45:00Z"
+    reason: "Work context and complexity assessment validated"
+    evidence:
+      - type: "work_context"
+        reference: "docs/60-work/FEAT-001/context.yaml"
+        description: "Validated work context"
+      - type: "complexity_assessment"
+        reference: "docs/60-work/FEAT-001/complexity-assessment.yaml"
+        description: "Complexity assessment scored 11 → balanced"
+    transition_id: "FEAT-001-intake-to-planned"
+    receipt: null
+  - from: "planned"
+    to: "ready_for_implementation"
+    changed_at: "2026-09-22T09:50:00Z"
+    reason: "Handoff artifact created and worktree resolved"
+    evidence:
+      - type: "handoff"
+        reference: "docs/60-work/FEAT-001/handoff.yaml"
+        description: "Handoff artifact created for FEAT-001"
+      - type: "bootstrap"
+        reference: "docs/60-work/FEAT-001/bootstrap-result.yaml"
+        description: "Bootstrap result with validated context and complexity"
+    transition_id: "FEAT-001-planned-to-ready"
+    receipt: null
+  - from: "ready_for_implementation"
+    to: "implementing"
+    changed_at: "2026-09-23T11:17:00Z"
+    reason: "Task worktree resumed, handoff validated, environment verified"
+    evidence:
+      - type: "handoff"
+        reference: "docs/60-work/FEAT-001/handoff.yaml"
+        description: "Handoff artifact validated in worktree"
+      - type: "resume"
+        reference: "Task worktree resumed at 2026-09-23T11:17:00Z"
+        description: "Worktree initialization complete, ready for SDD apply phase"
+    transition_id: "FEAT-001-ready-to-implementing"
+    receipt: null

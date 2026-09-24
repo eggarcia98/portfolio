@@ -1,0 +1,52 @@
+schema_version: "1.0"
+work_id: "FEAT-001"
+task_id: null
+classified_at: "2026-09-22T09:45:00Z"
+complexity:
+  dimensions:
+    scope:
+      score: 2
+      reason: "Creating a new database schema involves multiple files (migrations, models, types, repositories) and meaningful data modeling logic"
+    unknowns:
+      score: 2
+      reason: "Database technology not yet determined - requires codebase exploration to identify ORM, database type, and existing patterns"
+    subsystems:
+      score: 2
+      reason: "Primarily database subsystem with potential backend/API interaction through ORM or data access layer"
+    security_business_risk:
+      score: 2
+      reason: "Database schema defines data structure and correctness - incorrect schema leads to data integrity issues"
+    migration_impact:
+      score: 1
+      reason: "New schema creation (not modifying existing data) - low migration impact but creates initial structure"
+    production_impact:
+      score: 2
+      reason: "Schema will be used in production for project data storage - affects data persistence layer"
+  total_score: 11
+  score_profile: "architect"
+  forced_escalation:
+    required: false
+    triggers: []
+    target_profile: null
+    reasons: []
+reasons:
+  - "New database schema creation spans multiple files and subsystems"
+  - "Database technology unknown - requires codebase investigation"
+  - "Schema correctness critical for data integrity"
+  - "Production impact on data persistence layer"
+recommended_profile: "architect"
+override:
+  applied: true
+  profile: "balanced"
+  requested_by: "Erick"
+  reason: "Explicit user cost-control decision - architect profile not available, user selected balanced over advanced"
+  source: "current-session"
+selected_profile: "balanced"
+previous_classification: null
+evidence:
+  - type: "work-context"
+    reference: "docs/60-work/FEAT-001/context.yaml"
+    note: "Primary normalized work input"
+  - type: "repository"
+    reference: "package.json, src/ directory structure"
+    note: "Codebase inspection needed for technology stack"

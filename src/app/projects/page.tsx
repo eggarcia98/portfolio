@@ -1,10 +1,15 @@
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { PageHeader } from "@/components/ui/page-header";
-import { personalProjects, professionalProjects } from "@/lib/projects";
+import { getPersonalProjects, getProfessionalProjects } from "@/lib/projects";
 import Link from "next/link";
 
-export default function ProjectsPage() {
+export default async function ProjectsPage() {
+    const [professionalProjects, personalProjects] = await Promise.all([
+        getProfessionalProjects(),
+        getPersonalProjects(),
+    ]);
+
     const modules = [
         {
             title: "Professional Projects",
