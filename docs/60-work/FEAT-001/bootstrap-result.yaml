@@ -1,0 +1,57 @@
+version: 1
+work:
+  id: "FEAT-001"
+  project: "portfolio"
+  repository: "personal_repositories/portfolio"
+  source: "manual"
+context:
+  path: "docs/60-work/FEAT-001/context.yaml"
+  status: "valid"
+  validation_evidence: "validate-work-context.py passed"
+complexity:
+  path: "docs/60-work/FEAT-001/complexity-assessment.yaml"
+  status: "valid"
+  score: 11
+  assessed_profile: "architect"
+  effective_profile: "balanced"
+  override:
+    applied: true
+    profile: "balanced"
+    requested_by: "Erick"
+    reason: "Explicit user cost-control decision - architect profile not available, user selected balanced over advanced"
+    source: "current-session"
+routing:
+  gentle_ai_profile_available: true
+  sdd_entry_point: "sdd-explore-balanced"
+  independent_verification_required: true
+  judgment_day_required: false
+billing:
+  impact: "cost-neutral"
+  confirmation_required: false
+  confirmation_status: "not-required"
+  evidence: "User selected balanced profile explicitly - no cost increase vs default"
+execution:
+  base_branch: "stage"
+  worktree: "/home/orca/worktrees/FEAT-001-implementation"
+  mutation_scope: "docs/60-work/FEAT-001/context.yaml#constraints"
+  dag: "Work Context → SDD Plan → Implementation → Tests → SDD Verify → Independent Review → Evidence Collector → Completion Report"
+human_attention:
+  required: false
+  items: []
+artifacts:
+  expected:
+    - "docs/60-work/FEAT-001/proposal.yaml"
+    - "docs/60-work/FEAT-001/spec.yaml"
+    - "docs/60-work/FEAT-001/design.yaml"
+    - "docs/60-work/FEAT-001/tasks.yaml"
+    - "docs/60-work/FEAT-001/apply-progress.yaml"
+    - "docs/60-work/FEAT-001/verify-report.yaml"
+    - "docs/60-work/FEAT-001/archive-report.yaml"
+  preserved_evidence:
+    - "docs/60-work/FEAT-001/context.yaml"
+    - "docs/60-work/FEAT-001/complexity-assessment.yaml"
+    - "docs/60-work/FEAT-001/bootstrap-result.yaml"
+result:
+  status: "ready"
+  blockers: []
+  next_action: "Create handoff artifact and implementation worktree, then dispatch sdd-explore-balanced"

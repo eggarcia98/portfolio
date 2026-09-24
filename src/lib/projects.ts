@@ -6,7 +6,20 @@ export type Project = {
     href: string;
 };
 
-export const professionalProjects: Project[] = [
+export type ProjectType = "professional" | "personal";
+
+export type DatabaseProjectRow = {
+    type: ProjectType;
+    title: string;
+    summary: string;
+    impact: string | null;
+    tags: unknown;
+    href: string;
+    display_order: number;
+    is_featured: boolean;
+};
+
+const fallbackProfessionalProjects: Project[] = [
     {
         title: "HL7 Data Proxy & Cloud Run Integration",
         summary:
@@ -62,7 +75,7 @@ export const professionalProjects: Project[] = [
     },
 ];
 
-export const personalProjects: Project[] = [
+const fallbackPersonalProjects: Project[] = [
     {
         title: "Home Server Infrastructure",
         summary:
@@ -93,4 +106,103 @@ export const personalProjects: Project[] = [
         ],
         href: "/projects/personal/los-guayacos",
     },
+    {
+        title: "Orca-Gentle-AI Control Plane",
+        summary: "System to manage and develop projects using AI.",
+        impact: "AI-assisted project control plane",
+        tags: ["AI", "Project Management", "Automation", "SDD", "Orca", "Gentle-AI"],
+        href: "/projects/personal/orca-gentle-ai-control-plane",
+    },
 ];
+
+const projectSelect = [
+    "type",
+    "title",
+    "summary",
+    "impact",
+    "tags",
+    "href",
+    "display_order",
+    "is_featured",
+].join(",");
+
+const fallbackProjectsByType: Record<ProjectType, Project[]> = {
+    professional: fallbackProfessionalProjects,
+    personal: fallbackPersonalProjects,
+};
+
+function getSupabaseProjectsEndpoint() {
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+    if (!supabaseUrl || !anonKey) {
+        return null;
+    }
+
+    try {
+        const url = new URL("/rest/v1/projects", supabaseUrl);
+        url.searchParams.set("select", projectSelect);
+        url.searchParams.set("deleted_at", "is.null");
+        url.searchParams.set("order", "display_order.asc");
+
+        return { url, anonKey };
+    } catch {
+        return null;
+    }
+}
+
+function toProject(row: DatabaseProjectRow): Project {
+    return {
+        title: row.title,
+        summary: row.summary,
+        impact: row.impact ?? undefined,
+        tags: Array.isArray(row.tags)
+            ? row.tags.filter((tag): tag is string => typeof tag === "string")
+            : [],
+        href: row.href,
+    };
+}
+
+async function fetchProjectRows(): Promise<DatabaseProjectRow[] | null> {
+    const endpoint = getSupabaseProjectsEndpoint();
+
+    if (!endpoint) {
+        return null;
+    }
+
+    try {
+        const response = await fetch(endpoint.url, {
+            headers: {
+                apikey: endpoint.anonKey,
+                Authorization: `Bearer ${endpoint.anonKey}`,
+            },
+            next: { revalidate: 300 },
+        });
+
+        if (!response.ok) {
+            return null;
+        }
+
+        return (await response.json()) as DatabaseProjectRow[];
+    } catch {
+        return null;
+    }
+}
+
+async function getProjectsByType(type: ProjectType): Promise<Project[]> {
+    const rows = await fetchProjectRows();
+
+    if (!rows) {
+        return fallbackProjectsByType[type];
+    }
+
+    return rows.filter((row) => row.type === type).map(toProject);
+}
+
+export async function getProfessionalProjects(): Promise<Project[]> {
+    return getProjectsByType("professional");
+}
+
+export async function getPersonalProjects(): Promise<Project[]> {
+    return getProjectsByType("personal");
+}

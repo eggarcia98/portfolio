@@ -3,9 +3,11 @@ import { Navbar } from "@/components/navbar";
 import { BackLink } from "@/components/ui/back-link";
 import { PageHeader } from "@/components/ui/page-header";
 import { ProjectCard } from "@/components/ui/project-card";
-import { personalProjects } from "@/lib/projects";
+import { getPersonalProjects } from "@/lib/projects";
 
-export default function PersonalProjectsPage() {
+export default async function PersonalProjectsPage() {
+    const personalProjects = await getPersonalProjects();
+
     return (
         <div className="min-h-dvh">
             <Navbar />

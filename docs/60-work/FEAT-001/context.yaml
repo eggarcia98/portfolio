@@ -1,0 +1,84 @@
+version: 1
+identity:
+  id: "FEAT-001"
+  project: "portfolio"
+  type: "feature"
+  title: "Create database schema for project data storage"
+  branch: "feat/001-database-schema"
+  pr: null
+source:
+  type: "manual"
+  reference: null
+  summary: "Manual request to create a new database schema to store relevant project data in the portfolio repository"
+grouping:
+  strategy: "single"
+  key: "FEAT-001"
+  label: "Database schema creation"
+  rationale: "Single coherent feature request for database schema design and implementation"
+developer_input:
+  instructions:
+    - "Create a new database schema to store relevant project data"
+    - "Use the stage branch as base"
+    - "Prepare worktree for implementation"
+    - "Follow Orca-Gentle-AI Control Plane policies"
+  notes:
+    - "No specific database technology specified - will need to determine from codebase"
+    - "No existing schema to extend - this is a new schema creation"
+requirements:
+  - id: "FEAT-001-REQ-001"
+    text: "Design and implement a database schema for storing project data"
+    source:
+      type: "developer"
+      reference: null
+    priority: "high"
+    verification_hint: "Schema should support CRUD operations for project entities"
+  - id: "FEAT-001-REQ-002"
+    text: "Schema should be created in a new worktree from stage branch"
+    source:
+      type: "developer"
+      reference: null
+    priority: "high"
+    verification_hint: "Worktree named FEAT-001-implementation on branch feat/001-database-schema"
+context:
+  related_domains:
+    - "database"
+    - "schema-design"
+    - "data-modeling"
+  relevant_files:
+    - "package.json"
+    - "src/"
+    - "tsconfig.json"
+  related_work: []
+  related_decisions: []
+  documentation:
+    - "README.md"
+    - "package.json"
+  memory_queries:
+    - "database schema portfolio"
+    - "data modeling decisions"
+assumptions:
+  - text: "No existing database schema exists in the portfolio repository"
+    confidence: "medium"
+    requires_confirmation: true
+  - text: "Database technology will be determined by examining the codebase (package.json, config files)"
+    confidence: "high"
+    requires_confirmation: false
+  - text: "Stage branch contains the latest stable code to base the schema on"
+    confidence: "high"
+    requires_confirmation: false
+conflicts: []
+constraints:
+  - text: "Must follow Orca-Gentle-AI Control Plane worktree policies"
+    source: "system"
+  - text: "Worktree must be named FEAT-001-implementation"
+    source: "system"
+  - text: "Base branch is stage (remotes/origin/stage)"
+    source: "repository"
+  - text: "Implementation branch must be feat/001-database-schema"
+    source: "developer"
+execution:
+  profile: null
+  workflow: "sdd"
+  sdd_change_name: "database-schema"
+  human_gate_required: false
+status: "draft"

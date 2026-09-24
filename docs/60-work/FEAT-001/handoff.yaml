@@ -1,0 +1,26 @@
+version: 1
+work_id: "FEAT-001"
+status: "ready_for_implementation"
+repository:
+  base_branch: "stage"
+  implementation_branch: "feat/001-database-schema"
+worktree:
+  path: "/home/orca/worktrees/FEAT-001-implementation"
+  created_at: "2026-09-22T09:50:00Z"
+routing:
+  complexity: "high"
+  profile: "balanced"
+  gentle_ai_profile_verified: true
+workflow:
+  completed_through: "tasks"
+  next_phase: "apply"
+artifacts:
+  context: "docs/60-work/FEAT-001/context.yaml"
+  proposal: "docs/60-work/FEAT-001/proposal.yaml"
+  spec: "docs/60-work/FEAT-001/spec.yaml"
+  design: "docs/60-work/FEAT-001/design.yaml"
+  tasks: "docs/60-work/FEAT-001/tasks.yaml"
+  bootstrap_result: "docs/60-work/FEAT-001/bootstrap-result.yaml"
+  delivery_state: "docs/60-work/FEAT-001/delivery-state.yaml"
+resume:
+  instruction: "Open the FEAT-001-implementation worktree at /home/orca/worktrees/FEAT-001-implementation. Run 'sdd-explore-balanced' to begin database schema exploration, then proceed through SDD phases: propose → spec → design → tasks → apply."
