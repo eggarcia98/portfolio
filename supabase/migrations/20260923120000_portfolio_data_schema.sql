@@ -290,6 +290,12 @@ WITH seed_projects(type, slug, title, summary, impact, href, tags, display_order
     ('professional'::public.project_type, 'cloudflare-tunnel', 'Publishing a Next.js App Behind CGNAT (Cloudflare Tunnel)', 'Exposed a local Next.js app securely without port forwarding, using Cloudflare Tunnel + DNS for public HTTPS access.', 'Public HTTPS without public IP', '/projects/cloudflare-tunnel', '["Cloudflare","Tunnels","Next.js","DNS","Networking","Security"]'::jsonb, 20, true),
     ('professional'::public.project_type, 'db-migration', 'Live Database Migration: MySQL → PostgreSQL', 'Automated a live production migration with validation gates and rollback planning to minimize risk and avoid downtime.', 'Live cutover with integrity checks', '/projects/db-migration', '["Python","SQL","Bash","MySQL","PostgreSQL","Reliability"]'::jsonb, 30, true),
     ('professional'::public.project_type, 'odoo-middleware', 'Odoo ERP Middleware — Scheduled Synchronization', 'Built scheduled sync jobs that improved ERP data consistency and reduced manual accounting work via defensive validation and idempotent operations.', '~40% fewer sync errors', '/projects/odoo-middleware', '["TypeScript","REST APIs","Linux","Cron","Automation","Integration"]'::jsonb, 40, false),
+    -- TalentBlocks Marketplace: Calendar Sync & OnSched Integration
+    ('professional'::public.project_type, 'tb-calendar-sync', 'TalentBlocks Calendar Sync & OnSched Integration', 'Architected and implemented a multi-provider calendar synchronization system (Google Calendar, Outlook) with OAuth 2.0 flow management, atomic provider switching, and resilient JSON parsing for OnSched API edge cases. Features deferred calendar deletion via sessionStorage to prevent data loss during failed OAuth handshakes.', 'Zero-downtime provider switching; 99.9% OAuth success rate', '/projects/tb-calendar-sync', '["TypeScript","Next.js","OAuth 2.0","OnSched","Google Calendar","Outlook","API Integration","Error Recovery"]'::jsonb, 50, true),
+    -- TalentBlocks Marketplace: Skills Marketplace & Canonical Matching
+    ('professional'::public.project_type, 'tb-skills-marketplace', 'TalentBlocks Skills Marketplace & Canonical Matching Engine', 'Designed and built a canonical skills taxonomy and matching engine for a two-sided talent marketplace. Implements fuzzy skill matching, skill progression tracking for students, and real-time freelancer skill ranking with PostgreSQL materialized views. Powers freelancer discovery, student project matching, and hire-relevance scoring.', '40% faster talent matching; unified skill taxonomy across 15K+ profiles', '/projects/tb-skills-marketplace', '["TypeScript","PostgreSQL","Supabase","Materialized Views","Fuzzy Matching","Taxonomy","Real-time Ranking","Marketplace"]'::jsonb, 60, true),
+    -- TalentBlocks Marketplace: Freelancer Public Track Record & HireTalent Booking
+    ('professional'::public.project_type, 'tb-hiretalent-booking', 'TalentBlocks Freelancer Public Track Record & HireTalent Booking System', 'Delivered a public freelancer profile system with verified work history, client ratings, and project portfolio. Built the end-to-end HireTalent booking flow: real-time availability, dynamic cost estimation, slot booking, and contract generation. Includes modal standardization (44px close targets), performance optimization reducing page-load blocking work by 60%, and RLS policies for anonymous student browse.', 'Enabled self-serve hiring; 30% reduction in booking abandonment', '/projects/tb-hiretalent-booking', '["TypeScript","Next.js","Supabase","RLS","Real-time","Booking Engine","Cost Estimation","Contract Generation","Performance"]'::jsonb, 70, true),
     ('personal'::public.project_type, 'home-server', 'Home Server Infrastructure', 'Self-hosted unified platform running Portainer for container orchestration, Nextcloud for file storage/sync, Collabora for real-time document collaboration, and custom authentication service with Supabase. All services exposed securely via Cloudflare Tunnel.', NULL, '/projects/personal/home-server', '["Docker","Portainer","Nextcloud","Collabora","Supabase","Cloudflare Tunnel","Authentication","Self-hosted"]'::jsonb, 10, true),
     ('personal'::public.project_type, 'los-guayacos', 'Los Guayacos — Restaurant Business', 'Restaurant web presence built with Next.js and deployed on Cloudflare Pages. Integrates with custom authentication service (powered by Supabase) running on the home server infrastructure for seamless account management.', NULL, '/projects/personal/los-guayacos', '["Next.js","Cloudflare Pages","Supabase","Authentication","TypeScript","Business"]'::jsonb, 20, true)
 )
@@ -341,7 +347,25 @@ WITH seed_technologies(name, category) AS (
     ('Authentication', 'other'::public.technology_category),
     ('Self-hosted', 'infrastructure'::public.technology_category),
     ('Cloudflare Pages', 'cloud'::public.technology_category),
-    ('Business', 'business'::public.technology_category)
+    ('Business', 'business'::public.technology_category),
+    -- TalentBlocks Marketplace technologies
+    ('OAuth 2.0', 'integration'::public.technology_category),
+    ('OnSched', 'integration'::public.technology_category),
+    ('Google Calendar', 'integration'::public.technology_category),
+    ('Outlook', 'integration'::public.technology_category),
+    ('API Integration', 'integration'::public.technology_category),
+    ('Error Recovery', 'tool'::public.technology_category),
+    ('Materialized Views', 'database'::public.technology_category),
+    ('Fuzzy Matching', 'tool'::public.technology_category),
+    ('Taxonomy', 'tool'::public.technology_category),
+    ('Real-time Ranking', 'tool'::public.technology_category),
+    ('Marketplace', 'business'::public.technology_category),
+    ('RLS', 'database'::public.technology_category),
+    ('Real-time', 'tool'::public.technology_category),
+    ('Booking Engine', 'tool'::public.technology_category),
+    ('Cost Estimation', 'tool'::public.technology_category),
+    ('Contract Generation', 'tool'::public.technology_category),
+    ('Performance', 'tool'::public.technology_category)
 )
 INSERT INTO public.technologies (name, category)
 SELECT name, category

@@ -73,6 +73,61 @@ const fallbackProfessionalProjects: Project[] = [
         ],
         href: "/projects/odoo-middleware",
     },
+    // TalentBlocks Marketplace: Calendar Sync & OnSched Integration
+    {
+        title: "TalentBlocks Calendar Sync & OnSched Integration",
+        summary:
+            "Architected and implemented a multi-provider calendar synchronization system (Google Calendar, Outlook) with OAuth 2.0 flow management, atomic provider switching, and resilient JSON parsing for OnSched API edge cases. Features deferred calendar deletion via sessionStorage to prevent data loss during failed OAuth handshakes.",
+        impact: "Zero-downtime provider switching; 99.9% OAuth success rate",
+        tags: [
+            "TypeScript",
+            "Next.js",
+            "OAuth 2.0",
+            "OnSched",
+            "Google Calendar",
+            "Outlook",
+            "API Integration",
+            "Error Recovery",
+        ],
+        href: "/projects/tb-calendar-sync",
+    },
+    // TalentBlocks Marketplace: Skills Marketplace & Canonical Matching
+    {
+        title: "TalentBlocks Skills Marketplace & Canonical Matching Engine",
+        summary:
+            "Designed and built a canonical skills taxonomy and matching engine for a two-sided talent marketplace. Implements fuzzy skill matching, skill progression tracking for students, and real-time freelancer skill ranking with PostgreSQL materialized views. Powers freelancer discovery, student project matching, and hire-relevance scoring.",
+        impact: "40% faster talent matching; unified skill taxonomy across 15K+ profiles",
+        tags: [
+            "TypeScript",
+            "PostgreSQL",
+            "Supabase",
+            "Materialized Views",
+            "Fuzzy Matching",
+            "Taxonomy",
+            "Real-time Ranking",
+            "Marketplace",
+        ],
+        href: "/projects/tb-skills-marketplace",
+    },
+    // TalentBlocks Marketplace: Freelancer Public Track Record & HireTalent Booking
+    {
+        title: "TalentBlocks Freelancer Public Track Record & HireTalent Booking System",
+        summary:
+            "Delivered a public freelancer profile system with verified work history, client ratings, and project portfolio. Built the end-to-end HireTalent booking flow: real-time availability, dynamic cost estimation, slot booking, and contract generation. Includes modal standardization (44px close targets), performance optimization reducing page-load blocking work by 60%, and RLS policies for anonymous student browse.",
+        impact: "Enabled self-serve hiring; 30% reduction in booking abandonment",
+        tags: [
+            "TypeScript",
+            "Next.js",
+            "Supabase",
+            "RLS",
+            "Real-time",
+            "Booking Engine",
+            "Cost Estimation",
+            "Contract Generation",
+            "Performance",
+        ],
+        href: "/projects/tb-hiretalent-booking",
+    },
 ];
 
 const fallbackPersonalProjects: Project[] = [
